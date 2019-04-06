@@ -1,3 +1,5 @@
+Glitch.com examples: [https://glitch.com/@kcconch/shader-collection](https://glitch.com/@kcconch/shader-collection)
+
 # Getting started with shaders using p5.js
 
 This will live as a wiki page on p5js github: [https://github.com/processing/p5.js/wiki](https://github.com/processing/p5.js/wiki) 
