@@ -11,7 +11,7 @@ This will live as a wiki page on p5js github: [https://github.com/processing/p5.
 _The following is an overview of the Reference/tutorial we are writing for p5.js including a list of the examples that must be made. \
 We are trying to bridge the gap for a programmer who just started programming (p5 community) to understand how to make shaders._
 
-_ _--------------------------------------------------------------------------------------------
+#
 
 **Using shaders with p5**
 
