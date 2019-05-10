@@ -1,13 +1,5 @@
 # What is a shader?
 
-Shaders are a great way to make graphics for your projects. So far you have probably made graphic shapes like **rect**() or **ellipse**() or maybe even 3D shapes like a **plane**() or a **box**(), and you should be more than familiar with using **fill**() to decide the color of these objects. But wouldn't it be great if we could make these objects have moving graphics on them? And without slowing down our sketch?
-
-Enter the shader!
-
-(IMG different examples of shaders on stuff in p5)
-
-In this tutorial you will learn what a shader is, how to use it efficiently in p5, and how to make your own!
-
 First of all, even though you may never have written a shader before you have definitely come across them! Every 3D object in every computer game ever has a shader attached to the it, the shader decides what color the object takes, but also how light bounces off the object, whether it is transparent and much more. Also, if you have ever been to a concert where there were visuals which reacted to the sound or movements, these were likely shaders! 
 
 A shader is a small program that runs entirely on your graphics card, the GPU (Graphics Processing Unit), rather than the CPU (Central Processing Unit) of your computer. This makes it incredible fast. You place it in a sperat file from your p5 sketch.js, but we will get back to that.
