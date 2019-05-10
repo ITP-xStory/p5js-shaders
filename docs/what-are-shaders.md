@@ -1,8 +1,10 @@
 # What is a shader?
 
-First of all, even though you may never have written a shader before you have definitely come across them! Every 3D object in every computer game ever has a shader attached to the it, the shader decides what color the object takes, but also how light bounces off the object, whether it is transparent and much more. Also, if you have ever been to a concert where there were visuals which reacted to the sound or movements, these were likely shaders! 
+First of all, even though you may never have written a shader before, you have definitely come across them! For instance every 3D object in every computer game ever made, has a shader attached to the it. The shader decides what color the object takes, but also how light bounces off the object, whether it is transparent and much more. Also, if you have ever been to a concert where there were visuals which reacted to the sound or movements, these were likely shaders! 
 
-A shader is a small program that runs entirely on your graphics card, the GPU (Graphics Processing Unit), rather than the CPU (Central Processing Unit) of your computer. This makes it incredible fast. You place it in a sperat file from your p5 sketch.js, but we will get back to that.
+A shader is a small program that runs entirely on your graphics card, the GPU (Graphics Processing Unit), rather than the CPU (Central Processing Unit) of your computer. This makes it incredible fast. They are actually easy to write, and simple to implement in p5, once you understand the basics of how they work.
+
+Since a shader is it's own little script you place it in a seperat file from your p5 sketch.js, but we will get back to that.
 
 
 # How does a shader work?
