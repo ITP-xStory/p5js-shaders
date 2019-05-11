@@ -5,4 +5,4 @@
     * [Examples](./docs/examples.md)
 
 * Advanced
-    * [Pixel shaders are fun](/)
+    * [Pixel shaders are fun](/) 
