@@ -8,10 +8,10 @@
     * [Pixel shaders are fun](/) 
     
 * Examples
-   * Basics
-   * Texture Coordinates (Matrix Operation)
-   * Uniforms (Interactivity)
-   * Applying Shaders to Shapes p5
-   * Image Effects / Image Processing
-   * Working with Other Resources
-   * Experimental (Not Working 100%)
+   * [Basics](/)
+   * [Texture Coordinates (Matrix Operation)](/)
+   * [Uniforms (Interactivity)](/)
+   * [Applying Shaders to Shapes p5](/)
+   * [Image Effects / Image Processing](/)
+   * [Working with Other Resources](/)
+   * [Experimental (Not Working 100%)](/)
