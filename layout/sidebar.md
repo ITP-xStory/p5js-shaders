@@ -2,6 +2,7 @@
     * [Introduction p5.js shader](/)
     * [What are shaders?](./docs/what-are-shaders.md)
     * [Getting started with shaders in p5](./docs/getting-started-with-shaders-in-p5.md)
+    * [The anatomy of a shader](./docs/the-anatomy-of-a-shader.md)
     * [Examples](./docs/examples.md)
 
 * Advanced
