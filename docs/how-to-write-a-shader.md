@@ -9,7 +9,7 @@ It's important to note that these files are written in GLSL (OpenGL Shading Lang
 The .vert file handles everything that has to do with vertexes - that is all of your geometry (shapes) and its position on the canvas. The .frag file handles everything that has to do with the actual coloring of the pixels.
 
 The programs run like this:
-The .vert file is run first, and automatically passes the calculations we do about the geometry (shapes) on our canvas on to the .frag program. The fragment shader then colors the pixels according to their positions!
+The .vert file is run first, and automatically passes the calculations we do about the geometry (shapes) on our canvas on to the .frag file. The fragment file then colors the pixels according to their positions!
 
 *The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
 
@@ -36,68 +36,46 @@ precision mediump float;
 ```
 
 
-___________________________________________
+Then we make something called **attributes**, these contain information that is automatically sent to the shader by the p5 sketch.
+
+For shaders in p5 we must make sure one thing is always done in the .vert file: The pixel must be told where on the canvas it belongs! This attribute is called **vec3 aPosition**. You cannot change its name, and the attribute is read-only, meaning you cannot overwrite it later the .vert file. Attributes are usually named with in "a" as a prefix: "aSomething".
+
+The attribute contains position information, it is a vec3 (vector 3), meaning it contains x, y, and z values.
 
 
-
-
-
-
-// this is an attribute sent to the shader by p5 
-
-// it contains all of our vertex position information
-
-// it is a vec3, meaning it contains x, y, and z data
-
-// attribute signals that this is a global variable sent by the sketch
-
-// it is read only, meaning it cannot be changed directly (you can copy it though)
-
-// attributes exist in vertex shaders only
+```glsl
 
 attribute vec3 aPosition;
 
-// This "vec3 aPosition" is a built in shader function. You must keep that naming.
+```
 
-// It figures out the position of the pixel on our canvas
 
-attribute vec3 aPosition;
+All shaders must have a void main() function. This is where the program starts. Remember that everything in here is run for each pixel on the canvas! So you need to adjust your thinking to think about coding for just one pixel at a time!
 
-// We always must do at least this one thing in the vertex shader:
+For shaders in p5 there is something weird that needs to happen in the main() function. We need to scale the attribute aPosition. This might be a bug that is resolved in a later version. But for now we can get around it by simply scaling all pixels positions. 
 
-// Tell the pixels where on the canvas they live.
+First we copy the position data into a vec4 (vector 4), meaning we will now have the following numbers in there (x,y,z,w). We will put in 1.0 as the w parameter (when w = 1.0 the vector is treated as a position, when w = 0.0 the vector is treated as a direction, this is standard vector math ---------------------->>>> LINK to mathisfun). 
 
-//  All shaders have a void main() function.
+Then we scale the pixel position by two, and move it to the center of the screen (by doing -1.0). If we don't do this, it will appear with its bottom left corner in the center of the sketch. 
+
+Finally, the vertex shader requires there to be a vec4 output called **gl_Position**. This sends the position information on to the fragment shader file. This is done automatically, as long as you put it into the built in shader function "gl_Position".
+
+
+```glsl
 
 void main() {
 
-  // Copy the position data into a vec4, adding 1.0 as the w parameter,
+  vec4 positionVec4 = vec4(aPosition, 1.0); // Copy the position data into a vec4, adding 1.0 as the w parameter
 
-  //  when w = 1.0 the vector is treated as a position
-
-  //  when w = 0.0 the vector is treated as a direction
-
-  vec4 positionVec4 = vec4(aPosition, 1.0);
-
-  // scale the rect by two, and move it to the center of the screen
-
-  // if we don't do this, it will appear with its bottom left corner in the center of the sketch
-
-  // try commenting this line out to see what happens
-
-  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
-
-  // The vertex shader requires there to be a vec4 output called gl_Position
-
-  //  It sends the vertex information on to the fragment shader
-
-  // this is done automatically, as long as you put it into the built in shader function "gl_Position"
+  positionVec4.xy = positionVec4.xy * 2.0 - 1.0; // Scale to make the output fit the canvas. 
 
   gl_Position = positionVec4;
 
 }
 
 ```
+
+
 
 ### Content of shader.frag file
 
