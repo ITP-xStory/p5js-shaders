@@ -17,11 +17,8 @@ In contrast your GPU (Graphics Processing Unit) is capable of something called p
 
 To understand what a shader does, imagine the CPU as a single pipe, where all of the pixels on your canvas must pass through, one at a time, to be told what color they should have. Now imagine instead, that each pixel has its own pipe, and we could just tell every pixels on your canvas what color it should have in parallel (at the same time). That is what a shader does. 
 
-It is kind of like painting the Mona Lisa with a blast canon.
-
-a href="http://www.youtube.com/watch?feature=player_embedded&v=-P28LKWTzrI
-" target="_blank"><img src="http://img.youtube.com/vi/-P28LKWTzrI/0.jpg" 
-alt="MythBusters explain shaders" width="240" height="180" border="10" /></a>
+It is kind of like painting the Mona Lisa in an instance with a multicolored blast canon.
+We'll let MythBusters demonstrate.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-P28LKWTzrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
