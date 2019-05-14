@@ -1,4 +1,4 @@
-#Getting started with shaders in p5
+# Getting started with shaders in p5
 
 Let's look at a pared down example of a shader in a P5 sketch so we can begin to understand what's going on. We'll look at the p5.js code first.
 
