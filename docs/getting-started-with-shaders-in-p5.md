@@ -123,7 +123,9 @@ Let us look at a simple example, where we make our own one-color fill.
 
 ___________________________________________
 
-These are necessary definitions that let you graphics card know how to render the shader. Medium precision means 
+## Content of a shader.vert file
+
+First we write some necessary definitions that let your GPU know how to render the shader. GL_ES is a shader format. The level of precision tells the GPU the level of details in your drawing. Higher precision means that you want the rendering to have more details, this might lower your framerate, where lower precision will give you a better framerate. Let's go with medium. 
 
 
 ```glsl
@@ -138,25 +140,10 @@ precision mediump float;
 
 ___________________________________________
 
-## Shader example:
-
-**Coloring the background using a shader / making a fill**
-
-[https://glitch.com/~one-color](https://glitch.com/~one-color) 
 
 
 
-### Content of shader.vert file
 
-```glsl
-
-// These are necessary definitions that let you graphics card know how to render the shader
-
-#ifdef GL_ES
-
-precision mediump float;
-
-#endif
 
 // this is an attribute sent to the shader by p5 
 
@@ -248,6 +235,11 @@ void main() {
 
 
 ## Shader code
+
+**Coloring the background using a shader / making a fill**
+
+[https://glitch.com/~one-color](https://glitch.com/~one-color) 
+
 
 ### Content of shader.vert file
 
