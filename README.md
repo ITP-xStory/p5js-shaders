@@ -4,7 +4,7 @@ Shaders are a great way to make graphics for your projects. So far you have prob
 
 Enter the shader!
 
-(IMG different examples of shaders on stuff in p5)
+---------->>>>>>>> (IMG different examples of shaders on stuff in p5)
 
 In this tutorial you will learn what a shader is, how to use it efficiently in p5, and how to make your own!
 
