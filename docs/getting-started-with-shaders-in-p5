@@ -4,13 +4,13 @@ Let's look at a pared down example of a shader in a P5 sketch so we can begin to
 
 First we create a variable that will hold our shader in our p5 sketch.
 
-```js
+```javascript
 let theShader;
 ```
 
 Then we have to preload our shader files and store them in our shader variable, so that they are loaded before the sketch runs its setup or draw functions. Our shaders require two files, more on that later.
 
-```js
+```javascript
 function preload(){
 
 theShader = loadShader('shader.vert', 'shader.frag');
@@ -22,7 +22,7 @@ Now in setup we create our canvas. Shaders in p5.js are rendered using WebGL, so
 
 We also specify noStroke() for this example so our shader is borderless.
 
-```js
+```javascript
 function setup() {
 
 createCanvas(200,200,WEBGL);
@@ -32,7 +32,7 @@ createCanvas(200,200,WEBGL);
 
 Now in draw we must set our active shader using the built in shader() function, and create a p5 rect for the shader to be applied to (you can apply shaders to any shape).
 
-```js
+```javascript
 function draw() {
 
   shader(theShader);
@@ -48,7 +48,7 @@ ___________________________________________
 
 # p5.js Code
 
-```js
+```javascript
 
 // a shader variable
 
