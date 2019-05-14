@@ -50,7 +50,7 @@ And that's it for the p5 code! Now you know how to load a shader into p5. Next w
 
 ___________________________________________
 
-# p5.js code
+## p5.js code
 
 ```javascript
 
@@ -106,37 +106,47 @@ ___________________________________________
 
 # How to write a shader
 
-Now let's talk about what shader files we're loading.
+Now let's talk about the shader files we're loading.
 
-To make a shader you must make two files in your p5 sketch folder: A **"shader.vert"** file and a **"shader.frag"** file.
-
-You can name the shader files whatever you want. "myAwesomeShader.vert" and "myAwesomeShader.frag" are completely valid names. As long as you have both the .vert and the .frag file, you are good to go. 
+To make a shader you must make two files in your p5 sketch folder: A **"shader.vert"** file and a **"shader.frag"** file. You can name the shader files whatever you want. "myAwesomeShader.vert" and "myAwesomeShader.frag" are completely valid names. As long as you have both the .vert and the .frag file, you are good to go. 
 
 It's important to note that these files are written in GLSL (OpenGL Shading Language), which is a lower level language than Javascript, meaning it speaks more directly to your computer, specifically to your GPU. The code will seem foreign and confusing at first, but with time we can develop more of an understanding of what is going on.
 
 The .vert file handles everything that has to do with vertexes - that is all of your geometry (shapes) and its position on the canvas. The .frag file handles everything that has to do with the actual coloring of the pixels.
 
 The programs run like this:
+The .vert file is run first, and automatically passes the calculations we do about the geometry (shapes) on our canvas on to the .frag program. The fragment shader then colors the pixels according to their positions!
 
-The .vert file is run first, and automatically passes the calculations we can about the geometry (shapes) on our canvas on to the .frag program. The fragment shader then colors the pixels according to their positions!
+*The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
 
-**The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders). **
-
-Let us look at a simple example: 
+Let us look at a simple example, where we make our own one-color fill.
 
 ___________________________________________
 
-**EXAMPLE:**
+These are necessary definitions that let you graphics card know how to render the shader. Medium precision means 
 
-**Coloring your background using a shader**
 
-**Writing our own version of fill()**
+```glsl
+
+#ifdef GL_ES
+
+precision mediump float;
+
+#endif
+```
+
+
+___________________________________________
+
+## Shader example:
+
+**Coloring the background using a shader / making a fill**
 
 [https://glitch.com/~one-color](https://glitch.com/~one-color) 
 
-___________________________________________
 
-**Content of shader.vert file**
+
+### Content of shader.vert file
 
 ```glsl
 
@@ -204,7 +214,7 @@ void main() {
 
 ```
 
-**Content of shader.frag file**
+### Content of shader.frag file
 
 ```glsl
 
@@ -229,6 +239,63 @@ void main() {
     // gl_FragColor is a built in shader variable, and you .frag file must contain it
 
     // We are setting the vec3 color into a new vec4, with an transparency of 1 (no opacity)
+
+    gl_FragColor = vec4(color, 1.0);
+
+}
+
+```
+
+
+## Shader code
+
+### Content of shader.vert file
+
+```glsl
+
+#ifdef GL_ES
+
+precision mediump float;
+
+#endif
+
+
+
+attribute vec3 aPosition;
+
+attribute vec3 aPosition;
+
+
+
+void main() {
+
+  vec4 positionVec4 = vec4(aPosition, 1.0);
+
+  // scale the rect by two, and move it to the center of the screen - if we don't do this, it will appear with its bottom left corner in the center of the sketch
+
+  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+
+  gl_Position = positionVec4;
+
+}
+
+```
+
+### Content of shader.frag file
+
+```glsl
+
+#ifdef GL_ES
+
+precision mediump float;
+
+#endif
+
+
+
+void main() {
+
+    vec3 color = vec3(0.0, 0.0, 1.0);
 
     gl_FragColor = vec4(color, 1.0);
 
