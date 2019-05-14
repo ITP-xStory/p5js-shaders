@@ -1,6 +1,8 @@
 # Getting started with shaders in p5
 
-Let's look at a pared down example of a shader in a P5 sketch so we can begin to understand what's going on. We'll look at the p5.js code first.
+Now that we know what a shader is and how it is different from how you write a p5 sketch, let's look at a simple example of a shader in p5, so we can start writing our own!
+
+We'll look at the p5.js code first.
 
 First we create a variable that will hold our shader in our p5 sketch.
 
@@ -20,7 +22,7 @@ theShader = loadShader('shader.vert', 'shader.frag');
 
 Now in setup we create our canvas. Shaders in p5.js are rendered using WebGL, so we must make sure to specify WEBGL as the third parameter in the createCanvas() function.
 
-We also specify noStroke() for this example so our shader is borderless.
+We also specify [**noStroke()**](https://p5js.org/reference/#/p5/noStroke) for this example so our shader is borderless.
 
 ```javascript
 function setup() {
@@ -30,7 +32,7 @@ createCanvas(200,200,WEBGL);
 }
 ```
 
-Now in draw we must set our active shader using the built in shader() function, and create a p5 rect for the shader to be applied to (you can apply shaders to any shape).
+Now in draw we must set our active shader using the built in [**shader()**](https://p5js.org/reference/#/p5/shader) function, and create a p5 rect for the shader to be applied to (you can apply shaders to any shape and the shader won't work unless you specify a shape in your code).
 
 ```javascript
 function draw() {
