@@ -10,6 +10,7 @@ Since a shader is it's own script you simply place it in a seperat file from you
 ### How does a shader work?
 
 What you have been doing until now when you are drawing shapes in [***function draw()***](https://p5js.org/reference/#/p5/draw) in p5, relies mostly on the CPU.
+
 The CPU works by doing every calculation - every move of a pixel or shape you have been drawing until now - in sequence. If you look really closely at your screen you will see every tiny pixel it is made up of. When you are drawing using the CPU, the computer has to make each operation you tell it to do (for instance draw the color red, or increase the brightness), one pixel at a time. Think about it, one pixel at a time! If your screen is 2,560×1,600 pixels, that's 4.000.096 operations per frame. At around 30 frames or more per second that's 122.880.000 operations per second. 
 This is fine for basic programs, but you might have noticed, that the more objects you draw in the [***function draw()***](https://p5js.org/reference/#/p5/draw), the slower the program gets.
 
