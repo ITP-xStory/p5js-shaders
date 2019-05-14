@@ -3,7 +3,7 @@
     * [What are shaders?](./docs/what-are-shaders.md)
     * [Getting started with shaders in p5](./docs/getting-started-with-shaders-in-p5.md)
     * [The anatomy of a shader](./docs/the-anatomy-of-a-shader.md)
-    * [Important shader concepts](./docs/shader-variables.md) 
+    * [Important shader concepts](./docs/important-concepts.md) 
     * [Examples](./docs/examples.md)
 
 * Advanced
