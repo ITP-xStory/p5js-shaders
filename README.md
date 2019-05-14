@@ -12,7 +12,7 @@ Consider this the "booklet of shaders". A great way to start familiarizing yours
 
 
 ### Thank you
-This tutorial is an open-source project made during xStory at [ITP NYU](https://tisch.nyu.edu/itp) by Casey Conchinha and [Louise Lessél](http://www.louiselessel.com).
+This tutorial is an open-source project made during xStory at [ITP NYU](https://tisch.nyu.edu/itp) by [Casey Conchinha](https://github.com/kcconch) and [Louise Lessél](http://www.louiselessel.com).
 
 We want to thank the following people for help and guidance during the project:
 
