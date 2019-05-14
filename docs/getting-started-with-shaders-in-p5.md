@@ -29,6 +29,8 @@ function setup() {
 
 createCanvas(200,200,WEBGL);
 
+noStroke();
+
 }
 ```
 
@@ -44,11 +46,11 @@ function draw() {
 }
 ```
 
-And that's it for the p5 code!
+And that's it for the p5 code! Now you know how to load a shader into p5. Next we will look at how shaders are written.
 
 ___________________________________________
 
-# p5.js Code
+# p5.js code
 
 ```javascript
 
@@ -60,7 +62,7 @@ function preload(){
 
   // load the shader
 
-  theShader = loadShader('onecolor.vert', 'onecolor.frag');
+  theShader = loadShader('shader.vert', 'shader.frag');
 
 }
 
