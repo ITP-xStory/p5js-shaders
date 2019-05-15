@@ -88,7 +88,7 @@ void main() {
 
 
 
-## Content of shader.frag file
+## Content of a shader.frag file
 
 Before we get into how to use the position information from the .vert file, let's disregard it for a moment, and instead just color everything one color. 
 
@@ -146,7 +146,7 @@ ___________________________________________
 [https://glitch.com/~one-color](https://glitch.com/~one-color) 
 
 
-### Content of shader.vert file
+### shader.vert
 
 ```glsl
 
@@ -176,7 +176,7 @@ void main() {
 
 ```
 
-### Content of shader.frag file
+### shader.frag
 
 ```glsl
 
