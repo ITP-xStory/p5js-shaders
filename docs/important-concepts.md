@@ -193,24 +193,3 @@ void main() {
 }
 
 ```
-
-
-
-
---------------------->>>>>>>>>> DELETE ?????
-
-# The power of shaders
-
-Alright, so far we have made a fill() function and a gradient function similar to lerpColor(). But the true power of shaders is only really revealed when you are trying to make oven more complex coloring. 
-
-You might not understand this example right now, but you will see how a shader works and how fast it runs even though we are putting some pretty complex graphics in your sketch.
-
-
-
-So try this out:
-
-EXAMPLE THAT IS REALLY COMPLEX! LIKE A MANDELBROT OR SOMETHING. \
-Just to show power of shaders.
-
-
---------------------->>>>>>>>>>
