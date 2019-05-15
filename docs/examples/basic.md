@@ -1,4 +1,6 @@
 # Basic Gradient Shader
+This is a basic example showing a gradient shader loaded in p5.
+
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
