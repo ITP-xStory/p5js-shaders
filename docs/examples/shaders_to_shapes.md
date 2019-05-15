@@ -4,8 +4,8 @@
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/moire-shader?path=uniform.frag&previewSize=100"
-    alt="moire-shader-2 on Glitch"
+    src="https://glitch.com/embed/#!/embed/shader-as-texture?path=texture.frag&previewSize=100"
+    alt="shader-as-texture on Glitch"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
