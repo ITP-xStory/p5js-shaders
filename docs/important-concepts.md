@@ -33,7 +33,7 @@ By now you will have noticed that we are using vectors (vec3, vec4 etc.) a lot i
 We need to tell the variable how many numbers they will contain, so we use these types: float, vec2, vec3, vec4, vec5 etc. The number is the amount of parameters you intend to use. 
 
 ```glsl
-float scalar = 5.2; 	// a scalar that could manipulate the color in some way
+float scalar = 5.2; 			// a scalar that could be used to manipulate color or position
 
 vec2 position = vec2(0.5, 0.5);   	// the center of the canvas (width/2, height/2)
 
@@ -57,7 +57,7 @@ float blueComponent = color.r; 		// B = 1.0
 ```
 
 If we write color.rgb we get all three.
-We could even write color.xyz, the shader does not know that some numbers are a color and some are a position, it just knows that you are accesing the components of a vector. This is called [**Swizzling**]/https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Swizzling).
+We could even write color.xyz, the shader does not know that some numbers are a color and some are a position, it just knows that you are accesing the components of a vector. This is called [**Swizzling**](https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Swizzling).
 
 ```glsl
 vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
@@ -85,6 +85,7 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 1. Uniform
 2. Attributes
 3. Other common variables
+
 
 
 Now that we know that every position is defined as a floating point number between 0 and 1, and we know about uniforms, let's put it to work!
