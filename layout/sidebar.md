@@ -1,5 +1,6 @@
 * Getting started
     * [Introduction p5.js shader](/)
+    * [Why use shaders?](./docs/why-use-shaders.md)
     * [What are shaders?](./docs/what-are-shaders.md)
     * [Getting started with shaders in p5](./docs/getting-started-with-shaders-in-p5.md)
     * [How to write a shader](./docs/how-to-write-a-shader.md)
