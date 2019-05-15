@@ -18,4 +18,4 @@ We want to thank the following people for help and guidance during the project:
 
 Adam Ferris, for laying the groundwork for the entire project with his own [p5 shader github repo](https://github.com/aferriss/p5jsShaderExamples). 
 
-Or Fleisher, Kyle Phillips, Av Kim for being our mentors.
+Or Fleisher, Kyle Phillips, Sehyun Kim for being our mentors.
