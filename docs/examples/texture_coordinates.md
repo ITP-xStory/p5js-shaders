@@ -4,7 +4,7 @@
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/moire-shader-2?path=uniform.frag&previewSize=100"
+    src="https://glitch.com/embed/#!/embed/moire-shader?path=uniform.frag&previewSize=100"
     alt="moire-shader-2 on Glitch"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
@@ -35,7 +35,6 @@ function draw() {
   // so there's no need to cast (unlike processing)
   theShader.setUniform("u_resolution", [width, height]);
   theShader.setUniform("u_time", millis() / 1000.0);
-  theShader.setUniform("u_mouse", [mouseX, map(mouseY, 0, height, height, 0)]);
 
   // rect gives us some geometry on the screen
   rect(0,0,width,height);
@@ -43,13 +42,17 @@ function draw() {
 ```
 ### frag file
 ```frag
+// rotate/tile functions from example by patricio gonzalez vivo
+// @patriciogv ( patriciogonzalezvivo.com )
+
+#ifdef GL_ES
 precision mediump float;
+#endif
 
 #define PI 3.14159265358979323846
 
 uniform vec2 u_resolution;
 uniform float u_time;
-uniform vec2 u_mouse;
 
 
 vec2 rotate2D (vec2 _st, float _angle) {
@@ -110,24 +113,21 @@ float concentricCircles(in vec2 st, in vec2 radius, in float resolution, in floa
 
 void main (void) {
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
-    vec2 mst = gl_FragCoord.xy/u_mouse.xy;
-    float mdist= distance(vec2(2.0,2.0), mst);
 	// st = rotateTilePattern(st);
-    float dist = distance(st,vec2(sin(u_time/10.0),cos(u_time/10.0)));
-    st = tile(st,10.0);
-    // st = rotateTilePattern(st);
+    float dist = distance(st,vec2(abs(sin(u_time/10.0)),abs(cos(u_time/10.0))));
+    st = tile(st,4.0);
+    st = rotateTilePattern(st);
 
     // Make more interesting combinations
     // st = tile(st,dist *(sin(u_time) +1.0)* 10.0);
-    st = rotate2D(st,dist/(mdist/5.0)*PI*2.0);
+    st = rotate2D(st,dist*20.);
     // st = rotateTilePattern(st*2.);
     // st = rotate2D(st,PI*u_time*0.25);
 
     // step(st.x,st.y) just makes a b&w triangles
     // but you can use whatever design you want.
-    gl_FragColor = vec4(vec3(concentricCircles(st, vec2(0.0,0.0), 5.0, 5.0),concentricCircles(st, vec2(0.0,0.0), 10.0, 10.0),concentricCircles(st, vec2(0.0,0.0), 20.0, 10.0)),1.0);
+    gl_FragColor = vec4(vec3(concentricCircles(st, vec2(0.0,0.0), 5.0, 10.0)),1.0);
 }
-
 ```
 ### vert file
 ```vert
@@ -137,18 +137,7 @@ void main (void) {
 // our vertex data
 attribute vec3 aPosition;
 
-// our texcoordinates
-attribute vec2 aTexCoord;
-
-// this is a variable that will be shared with the fragment shader
-// we will assign the attribute texcoords to the varying texcoords to move them from the vert shader to the frag shader
-// it can be called whatever you want but often people prefiv it with 'v' to indicate that it is a varying
-varying vec2 vTexCoord;
-
 void main() {
-
-  // copy the texture coordinates
-  vTexCoord = aTexCoord;
 
   // copy the position data into a vec4, using 1.0 as the w component
   vec4 positionVec4 = vec4(aPosition, 1.0);
