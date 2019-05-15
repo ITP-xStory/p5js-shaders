@@ -97,14 +97,13 @@ Now that we know that every position is defined as a floating point number betwe
 
 [https://gradient-color.glitch.me](https://gradient-color.glitch.me)
 
-The following code makes a gradient depending on the position of the pixel on your canvas.
+The following code makes a gradient depending on the position of the pixel on your canvas. The vertex shader file is the same as always.
+
 
 
 ### shader.vert file
 
 ```glsl
-
-// These are necessary definitions that let you graphics card know how to render the shader
 
 #ifdef GL_ES
 
@@ -112,7 +111,9 @@ precision mediump float;
 
 #endif
 
+
 attribute vec3 aPosition;
+
 
 // Always include this to get the position of the pixel
 
@@ -130,11 +131,13 @@ void main() {
 
 ```
 
+
+We pass in the size of the canvas as a uniform called vec2 u_resolution;
+
+
 ### shader.frag file
 
 ```glsl
-
-// These are necessary definitions that let you graphics card know how to render the shader
 
 #ifdef GL_ES
 
@@ -142,11 +145,10 @@ precision mediump float;
 
 #endif
 
-// In this example we care about where on the canvas the pixel lives, so we need to know the size of the canvas.
 
-// This is passed in as a uniform from the sketch.js file.
 
-uniform vec2 u_resolution;
+uniform vec2 u_resolution; // This is passed in as a uniform from the sketch.js file
+
 
 void main() {
 
