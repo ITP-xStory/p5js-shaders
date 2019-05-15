@@ -29,8 +29,6 @@ function draw() {
   // shader() sets the active shader with our shader
   shader(theShader);
   
- 
-
   // lets send the resolution, mouse, and time to our shader
   // before sending mouse + time we modify the data so it's more easily usable by the shader
   theShader.setUniform('resolution', [width, height]);
