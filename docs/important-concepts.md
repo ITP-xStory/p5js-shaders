@@ -1,6 +1,6 @@
 # Important shader concepts
 
-### Get used to thinking about the space between 0 and 1!
+## Get used to thinking about the space between 0 and 1!
 
 When writing shaders everything you need to do exists in the space between 0 and 1!
 This might sound confusing, but it is actually really smart, because it makes our calculations incredible fast and easy to deal with. As we will see in a moment when we create a gradient (already we are moving beyond what [**fill()**](https://p5js.org/reference/#/p5/fill) can do!).
@@ -20,13 +20,13 @@ This might sound confusing, but it is actually really smart, because it makes ou
 ------------>>>>>>>>> ( Interactive? Drawing of Canvas Scale 0 to 1 )
 
 
-### Get used to writing out everything as floating point values
+## Get used to writing out everything as floating point values
 Since everything is defined between 0 and 1. Always write out the whole floating point value, including the punctuation! Do not write (0,0,1) for blue, write (0.0, 0.0, 1.0). Graphics cards can be more or less picky about this, but if you have a picky graphics card, the shader will not run!
 
 _________________________________________
 
 
-# Making variables and changing them
+## Making variables and changing them
 
 By now you will have noticed that we are using vectors (vec3, vec4 etc.) a lot in shaders. We use them to enter in our numbers for different variables. This is simply how we write our variables, just like you might know types such as integers and floats from other programming languages.
 
@@ -82,9 +82,9 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 ------------>>>>>>>>> 
 
 
-1. Uniform
-2. Attributes
-3. Other common variables
+# Using Uniforms 
+# Using Attributes
+# Other common variables
 
 
 
@@ -100,7 +100,7 @@ Now that we know that every position is defined as a floating point number betwe
 The following code makes a gradient depending on the position of the pixel on your canvas.
 
 
-## Content of shader.vert file
+### shader.vert file
 
 ```glsl
 
@@ -130,7 +130,7 @@ void main() {
 
 ```
 
-## Content of shader.frag file
+### shader.frag file
 
 ```glsl
 
@@ -197,6 +197,7 @@ void main() {
 
 
 
+--------------------->>>>>>>>>> DELETE ?????
 
 # The power of shaders
 
