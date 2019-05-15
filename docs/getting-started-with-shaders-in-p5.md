@@ -101,3 +101,10 @@ function windowResized(){
 }
 
 ```
+
+
+___________________________________________
+
+# Setting up p5.js in Glitch
+
+
