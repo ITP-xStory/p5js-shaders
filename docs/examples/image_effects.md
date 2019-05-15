@@ -1,5 +1,5 @@
-# Applying Shaders as Textures
-### This is an example showing how to apply your shaders to 2D/3D shapes in p5.
+# Applying Images Effects to the Webcam
+### This example passes the webcam to the shader as a texture and manipulates the image with shader math.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
