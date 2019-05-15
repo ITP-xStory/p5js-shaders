@@ -1,28 +1,31 @@
-# Get used to thinking about the space between 0 and 1!
+# Important shader concepts
+
+## Get used to thinking about the space between 0 and 1!
 
 When writing shaders everything you need to do exists in the space between 0 and 1!
+This might sound confusing, but it is actually really smart, because it makes our calculations incredible fast and easy to deal with. As we will see in a moment when we create a gradient (already we are moving beyond what [**fill()**](https://p5js.org/reference/#/p5/fill) can do!).
 
-This might sound confusing, but it is actually really smart, because it makes our calculations incredible fast and easy to deal with. As we will see in a moment when we create a gradient (already we are moving beyond what fill() can do!).
+* **Colors** are defined as RGB but the color values goes from 0 - 1 instead of 0 - 255. 
+..* So the color Blue would be (0.0, 0.0, 1.0) instead of (0, 0, 255).
+..* And the color Orange would be (1.0, 0.5, 0.0) instead of (255, 128, 0).
 
-Colors are defined as RGB but the color values goes from 0 - 1 instead of 0 - 255. 
+* **Position** of the pixels on your canvas is defined in terms of their position between 0 and 1.
+..* So position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader (note the floating point values).
+..* Position x = width, y = height or (width, height) for a sketch, is position (1.0, 1.0) for the shader.
 
-So the color Blue would be (0.0, 0.0, 1.0) instead of (0, 0, 255).
+*This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner!*
 
-And the color Orange would be (1.0, 0.5, 0.0) instead of (255, 128, 0).
-
-The position of the pixels on your canvas is defined in terms of their position between 0 and 1, so position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader (note the floating point values). 
-
-Position x = width, y = height or (width, height) for a sketch, is position (1.0, 1.0) for the shader.
-
-This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner!
+^^^^^^^^^^^^^check this.
 
 ------------>>>>>>>>> ( Drawing of Canvas Scale 0 to 1 )
 
 
+## Get used to writing out everything as floating point values
+Since everything is defined between 0 and 1. Always write out the whole floating point value, including the punctuation! Do not write (0,0,1) for blue, write (0.0, 0.0, 1.0). Graphics cards can be more or less picky about this, but if you have a picky graphics card, the shader will not run!
 
-Since everything is defined between 0 and 1. Always write out the whole floating point value, including the punctuation! Do not write (0,0,1) for blue, write (0.0, 0.0, 1.0). This is because different graphics cards are more or less picky, and if you have a picky graphics card, the shader will not run!
+------------>>>>>>>>>  Now that we know that every position is defined as a float between 0 and 1 we can make a gradient, and we know about uniforms, let's put it to work!
 
-Now that we know that every position is defined as a float between 0 and 1 we can make a gradient, and we know about uniforms, let's put it to work!
+
 
 #
 
