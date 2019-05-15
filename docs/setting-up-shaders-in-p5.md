@@ -1,4 +1,4 @@
-# Getting started with shaders in p5
+# Setting up shaders in p5
 
 Now that we know what a shader is and how it is different from how you write a p5 sketch, let's look at a simple example of a shader in p5, so we can start writing our own!
 
