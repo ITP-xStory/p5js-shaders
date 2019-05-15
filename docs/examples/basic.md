@@ -1,5 +1,5 @@
 <!-- Copy and Paste Me -->
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+<div class="glitch-embed-wrap" style="height: 720px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
     src="https://glitch.com/embed/#!/embed/basic-shader?path=README.md&previewSize=100"
