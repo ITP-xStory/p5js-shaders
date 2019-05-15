@@ -39,7 +39,7 @@ function windowResized(){
 }
 ```
 ### frag file
-```glsl
+```GLSL
 precision mediump float;
 
 // this is the same variable we declared in the vertex shader
