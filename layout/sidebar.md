@@ -11,7 +11,7 @@
     * [Pixel shaders are fun](/) 
     
 * Examples
-   * [Basics](./docs/examples/basic.md)
+   * [Basic](./docs/examples/basic.md)
    * [Texture Coordinates (Matrix Operation)](./docs/examples/texture_coordinates.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
    * [Applying Shaders to Shapes p5](./docs/examples/shaders_to_shapes.md)
