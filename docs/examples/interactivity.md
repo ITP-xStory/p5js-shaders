@@ -1,5 +1,5 @@
 # Uniforms & Interactivity with Shaders
-### Uniforms are a way of passing information from p5 to our shader. Here were passing our mouse coordinates.
+### Uniforms are a way of passing information from p5 to our shader. Here we're passing our mouse coordinates.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
