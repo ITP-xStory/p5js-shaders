@@ -1,6 +1,6 @@
 # Important shader concepts
 
-## Get used to thinking about the space between 0 and 1!
+### Get used to thinking about the space between 0 and 1!
 
 When writing shaders everything you need to do exists in the space between 0 and 1!
 This might sound confusing, but it is actually really smart, because it makes our calculations incredible fast and easy to deal with. As we will see in a moment when we create a gradient (already we are moving beyond what [**fill()**](https://p5js.org/reference/#/p5/fill) can do!).
@@ -20,10 +20,39 @@ This might sound confusing, but it is actually really smart, because it makes ou
 ------------>>>>>>>>> ( Drawing of Canvas Scale 0 to 1 )
 
 
-## Get used to writing out everything as floating point values
+### Get used to writing out everything as floating point values
 Since everything is defined between 0 and 1. Always write out the whole floating point value, including the punctuation! Do not write (0,0,1) for blue, write (0.0, 0.0, 1.0). Graphics cards can be more or less picky about this, but if you have a picky graphics card, the shader will not run!
 
 ------------>>>>>>>>>  Now that we know that every position is defined as a float between 0 and 1 we can make a gradient, and we know about uniforms, let's put it to work!
+
+
+# Making variables and changing them
+
+By now you will have noticed that we are using vectors (vec3, vec4 etc.) a lot in shaders. We use them to enter in our numbers for different variables. This is simply how we write our variables, just like you might know types such as integers and floats from other programming languages.
+
+We need to tell the variable how many numbers they will contain, so we use these types: float, vec2, vec3, vec4, vec5 etc. The number is the amount of parameters you intend to use. 
+
+```glsl
+
+float scalar = 5.2; // for instance: a scalar that could manipulate the color in some way
+
+vec2 position = vec2(0.5, 0.5);   // for instance: the center of the canvas (width/2, height/2)
+
+vec3 color = vec3(0.0, 0.5, 1.0); // for instance: R = 0, G = 0.5, B = 1.0
+
+vec4 colorWithAlpha = vec4(0.0, 0.5, 1.0, 0.5); // for instance: color that is half transparent A = 0.5
+
+```
+
+The neat way about constructing our variables this way is the we can access their components easily.
+
+We can access these as color.r, color.g, color.b
+
+If we write color.rgb we get all three!
+
+(We could also do color.xyz, it'd be the same.)
+
+This is called Swizzling.
 
 
 
@@ -136,33 +165,6 @@ void main() {
 2. Attributes
 3. Other common variables
 
-# Making variables and changing them
-
-By now you will have noticed that we are using vectors a lot in shaders. We use them to enter in our numbers for different variables. So for now just get used to writing your numbers this way.
-
-We need to tell the variable how many numbers they will contain, so we use types: float, vec2, vec3, vec4, vec5 etc. The number is the amount of parameters you intend to use. 
-
-```glsl
-
-float scalar = 5.2; // for instance: a scalar that could manipulate the color in some way
-
-vec2 position = vec2(0.5, 0.5);   // for instance: the center of the canvas (width/2, height/2)
-
-vec3 color = vec3(0.0, 0.5, 1.0); // for instance: R = 0, G = 0.5, B = 1.0
-
-vec4 colorWithAlpha = vec4(0.0, 0.5, 1.0, 0.5); // for instance: color that is half transparent A = 0.5
-
-```
-
-The neat way about constructing our variables this way is the we can access their components easily.
-
-We can access these as color.r, color.g, color.b
-
-If we write color.rgb we get all three!
-
-(We could also do color.xyz, it'd be the same.)
-
-This is called Swizzling.
 
 
 ## The power of shaders
