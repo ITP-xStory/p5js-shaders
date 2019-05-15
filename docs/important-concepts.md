@@ -214,11 +214,3 @@ Just to show power of shaders.
 
 
 --------------------->>>>>>>>>>
-
-
-
-# When to use a shader in p5?
-
-You should be looking into shader
-
-And when not to ...
