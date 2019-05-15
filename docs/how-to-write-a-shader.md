@@ -36,7 +36,7 @@ precision mediump float;
 
 Then we make something called **attributes**, these contain information that is automatically sent to the shader by the p5 sketch.
 
-For shaders in p5 we must make sure one thing is always done in the .vert file: The pixel must be told where on the canvas it belongs! This attribute is called **vec3 aPosition**. You cannot change its name, and the attribute is read-only, meaning you cannot overwrite it later the .vert file. Attributes are usually named with in "a" as a prefix: "aSomething".
+For shaders in p5 we must make sure one thing is always done in the .vert file: The pixel must be told where on the canvas it belongs! This attribute is called **vec3 aPosition**. You cannot change its name, and the attribute is read-only, meaning you cannot overwrite it. Attributes are usually named with in "a" as a prefix: "aSomething".
 
 The attribute contains position information, it is a vec3 (vector 3), meaning it contains x, y, and z values.
 
@@ -48,25 +48,28 @@ attribute vec3 aPosition;
 
 
 
-All shaders must have a void main() function. This is where the program starts. Remember that everything in here is run for each pixel on the canvas! So you need to adjust your thinking to think about coding for just one pixel at a time!
+All shaders must have a void main() function. This is where the program starts. Remember that everything in here is run for each pixel on the canvas! So you need to adjust your thinking, and think about coding for just one pixel at a time!
 
 For shaders in p5, there is something weird that needs to happen in the main() function.
 We need to scale the attribute aPosition before it can be passed to the .frag file. This might be a bug that is resolved in a later version. But for now we can get around it by simply scaling all pixels positions.
 
 
-First we copy the position data into a vec4 (vector 4), meaning we will now have the following numbers in there (x,y,z,w). We will put in 1.0 as the w parameter (when w = 1.0 the vector is treated as a position, when w = 0.0 the vector is treated as a direction, this is standard vector math ---------------------->>>> LINK to mathisfun). 
+First we copy the position data into a vec4 (vector 4), meaning we will now have the following numbers in there (x,y,z,w). We will put in 1.0 as the w parameter (when w = 1.0 the vector is treated as a position, when w = 0.0 the vector is treated as a direction, this is standard vector math). 
 
-Then we scale the pixel position by two, and move it to the center of the screen. If we don't do this, it will appear with its bottom left corner in the center of the sketch. These numbers won't make any sense right now, but they will after you read the [Important shader concepts](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts).
+Then we scale the pixel position by two, and move it to the center of the screen. If we don't do this, it will appear with its bottom left corner in the center of the sketch. These numbers might not make any sense right now, but they will after you read the [Important shader concepts](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts).
 
 ```glsl
 positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
 
 ```
 
-Finally, the vertex shader *requires* there to be a vec4 output called **gl_Position**. This sends the position information on to the fragment shader file. This is done automatically. This must be the final line of your .vert file.
-So let's set it equal to the scaled calculation we made gl_Position = positionVec4.
-
 *This position calculation always needs to be there, whether we choose to use it in the .frag file or not.*
+
+
+Finally, the vertex shader requires there to be a vec4 output called **gl_Position**. 
+This automatically sends the position information on to the fragment shader file. It is good form to put this as the final line of your .vert file.
+So let's set it equal to the scaled calculation we made: gl_Position = positionVec4.
+
 
 
 ```glsl
@@ -85,7 +88,7 @@ void main() {
 
 
 
-### Content of shader.frag file
+## Content of shader.frag file
 
 Before we get into how to use the position information from the .vert file, let's disregard it for a moment, and instead just color everything one color. 
 
@@ -98,7 +101,8 @@ We will make a new vec3 called *color* and put a color in it. This is just a var
 vec3 color = vec3(0.0, 0.0, 1.0);
 ```
 
-Finally, the fragment shader *requires* there to be a vec4 output called **gl_FragColor**. This must be the final line of your .frag file.
+Finally, the fragment shader requires there to be a vec4 output called **gl_FragColor**. This line is what tells the GPU how to color the pixel. This must be the final line of your .frag file, any code placed after this line will not have any effect, and you might get a "code not reached" error.
+
 **gl_FragColor** expects the format vec4 (r,g,b,a), so we put in 1.0 as our alpha, meaning no transparency.
 
 
@@ -135,9 +139,9 @@ void main() {
 
 ___________________________________________
 
-## Shader code
+# Shader code: One color fill
 
-Coloring the background using a shader / making a fill**
+
 
 [https://glitch.com/~one-color](https://glitch.com/~one-color) 
 
