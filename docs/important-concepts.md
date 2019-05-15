@@ -6,12 +6,12 @@ When writing shaders everything you need to do exists in the space between 0 and
 This might sound confusing, but it is actually really smart, because it makes our calculations incredible fast and easy to deal with. As we will see in a moment when we create a gradient (already we are moving beyond what [**fill()**](https://p5js.org/reference/#/p5/fill) can do!).
 
 * **Colors** are defined as RGB but the color values goes from 0 - 1 instead of 0 - 255. 
-⋅⋅* So the color Blue would be (0.0, 0.0, 1.0) instead of (0, 0, 255).
-⋅⋅* And the color Orange would be (1.0, 0.5, 0.0) instead of (255, 128, 0).
+  * So the color Blue would be (0.0, 0.0, 1.0) instead of (0, 0, 255).
+  * And the color Orange would be (1.0, 0.5, 0.0) instead of (255, 128, 0).
 
 * **Position** of the pixels on your canvas is defined in terms of their position between 0 and 1.
-⋅⋅* So position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader (note the floating point values).
-⋅⋅* Position x = width, y = height or (width, height) for a sketch, is position (1.0, 1.0) for the shader.
+  * So position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader (note the floating point values).
+  * Position x = width, y = height or (width, height) for a sketch, is position (1.0, 1.0) for the shader.
 
 *This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner!*
 
