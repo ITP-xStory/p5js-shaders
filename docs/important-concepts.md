@@ -10,20 +10,20 @@ This might sound confusing, but it is actually really smart, because it makes ou
   * And the color Orange would be (1.0, 0.5, 0.0) instead of (255, 128, 0).
 
 * **Position** of the pixels on your canvas is defined in terms of their position between 0 and 1.
-  * So position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader (note the floating point values).
+  * So position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader.
   * Position x = width, y = height or (width, height) for a sketch, is position (1.0, 1.0) for the shader.
 
 *This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner!*
 
 ^^^^^^^^^^^^^check this.
 
------------->>>>>>>>> ( Drawing of Canvas Scale 0 to 1 )
+------------>>>>>>>>> ( Interactive? Drawing of Canvas Scale 0 to 1 )
 
 
 ### Get used to writing out everything as floating point values
 Since everything is defined between 0 and 1. Always write out the whole floating point value, including the punctuation! Do not write (0,0,1) for blue, write (0.0, 0.0, 1.0). Graphics cards can be more or less picky about this, but if you have a picky graphics card, the shader will not run!
 
------------->>>>>>>>>  Now that we know that every position is defined as a float between 0 and 1 we can make a gradient, and we know about uniforms, let's put it to work!
+_________________________________________
 
 
 # Making variables and changing them
@@ -56,7 +56,9 @@ float blueComponent = color.r; 		// B = 1.0
 
 ```
 
-If we write color.rgb we get all three (we could even write color.xyz, it'd be the same, the shader does not care, you are just accesing the components.)
+If we write color.rgb we get all three.
+We could even write color.xyz, the shader does not know that some numbers are a color and some are a position, it just knows that you are accesing the components of a vector. This is called [**Swizzling**]/https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Swizzling).
+
 ```glsl
 vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
 
@@ -65,22 +67,39 @@ vec3 colorCopy2 = color.xyz; 		// R = 0, G = 0.5, B = 1.0
 
 ```
 
-This is called **Swizzling**. You can read more about it here if you are interested: https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Swizzling.
+
+We can change them just as easily:
+
+```glsl
+vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
+
+color.r = 0.833; 			// setting the R component to a new value
+
+vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
+
+```
+
+------------>>>>>>>>> 
+
+
+1. Uniform
+2. Attributes
+3. Other common variables
+
+
+Now that we know that every position is defined as a floating point number between 0 and 1, and we know about uniforms, let's put it to work!
 
 
 
-#
 
-**EXAMPLE:**
-
-**Coloring your background using a shader**
-
-**Writing a fill() that is a gradient**
+# Shader Coder: Gradient fill
 
 [https://gradient-color.glitch.me](https://gradient-color.glitch.me)
-#
 
-**Content of shader.vert file**
+The following code makes a gradient depending on the position of the pixel on your canvas.
+
+
+## Content of shader.vert file
 
 ```glsl
 
@@ -110,7 +129,7 @@ void main() {
 
 ```
 
-**Content of shader.frag file**
+## Content of shader.frag file
 
 ```glsl
 
@@ -174,29 +193,29 @@ void main() {
 
 ```
 
-1. Uniform
-2. Attributes
-3. Other common variables
 
 
 
-## The power of shaders
+
+# The power of shaders
 
 Alright, so far we have made a fill() function and a gradient function similar to lerpColor(). But the true power of shaders is only really revealed when you are trying to make oven more complex coloring. 
 
 You might not understand this example right now, but you will see how a shader works and how fast it runs even though we are putting some pretty complex graphics in your sketch.
 
-#
+
 
 So try this out:
 
 EXAMPLE THAT IS REALLY COMPLEX! LIKE A MANDELBROT OR SOMETHING. \
 Just to show power of shaders.
 
-#
+
+--------------------->>>>>>>>>>
 
 
-## When to use a shader in p5?
+
+# When to use a shader in p5?
 
 You should be looking into shader
 
