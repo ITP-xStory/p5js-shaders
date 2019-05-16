@@ -81,9 +81,24 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 
 ------------>>>>>>>>> 
 
+## Variable Qualifiers
+Variable qualifiers go before the variable type and name to determine how the variable will be used.
+### Using Const
+Const is short for Constant, which is a variable that never changes in the life of our program.
+Unlike p5, constants like PI are not in shader code. So in order to use PI in our code we have to define the constant PI in our code.
+There are two ways of doing this:
+```glsl
+const float PI = 3.14159265358979323846;
+```
+or
+```glsl
+#define PI 3.14159265358979323846
+```
+Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. This is theoretically faster and more efficient because it is not a variable stored in memory.
 
 ### Using Uniforms 
 ### Using Attributes
+### Using Varying
 ### Other common variables
 
 
