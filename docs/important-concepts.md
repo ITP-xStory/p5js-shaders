@@ -117,20 +117,22 @@ void main() {
 
 ### Using Uniforms
 Uniforms are constant variables, but unlike consts they are constant per frame, which means that they can be updated between draw calls. Uniforms can be accessed by all of the parallel threads in our GPU (remember the Mona Lisa painted by pipes example). They are called uniforms because the information being received by each thread is the same, as a result of this necessity of uniformity for all threads, each thread can read the input data but cannot modify it.
+
 The important thing to know about uniforms is that they are how we can pass information from the CPU to GPU, or in other words, from p5 to our shader code.
 
-The most common uniforms to pass from p5 are time, resolution, and mouse coordinates.
+The most common uniforms to pass from p5 are time, resolution, and mouse coordinates. It is common practice to name these with a u_ prefix.
+
 Our p5 code to send those 3 uniforms:
 ```javascript
-theShader.setUniform("resolution", [width, height]);
-theShader.setUniform("time", millis() / 1000.0); // we divide millis by 1000 to convert it to seconds
-theShader.setUniform("mouse", [mouseX, map(mouseY, 0, height, height, 0)]); // we flip Y so it's oriented properly in our shader
+theShader.setUniform("u_resolution", [width, height]);
+theShader.setUniform("u_time", millis() / 1000.0); // we divide millis by 1000 to convert it to seconds
+theShader.setUniform("u_mouse", [mouseX, map(mouseY, 0, height, height, 0)]); // we flip Y so it's oriented properly in our shader
 ```
 Then in our fragment shader (.frag) we must recieve the uniforms and define their type (vec2, float, etc.):
 ```glsl
-uniform vec2 resolution;
-uniform float time;
-uniform vec2 mouse;
+uniform vec2 u_resolution;
+uniform float u_time;
+uniform vec2 u_mouse;
 ```
 
 ### Using Varying
@@ -190,7 +192,7 @@ precision mediump float;
 attribute vec3 aPosition;
 
 
-// Always include this to get the position of the pixel
+// Always include this to get the position of the pixel and map the shader correctly onto the shape
 
 void main() {
 
@@ -207,7 +209,55 @@ void main() {
 ```
 
 
-We pass in the size of the canvas as a uniform called vec2 u_resolution;
+We pass in the size of the canvas as a uniform called **vec2 u_resolution**.
+This is set up in the sketch.js file: theShader.setUniform("u_resolution", [width, height]);
+
+The uniform now contains the width and height of the canvas, with u_resolution.x containing the width, and u_resolution.y containing the height.
+
+
+```glsl
+uniform vec2 u_resolution;
+```
+
+In the **main()** function we get the position of each pixel on our canvas from **gl_FragCoord.xy** (fragment coordinate). This automaticall uses the information we provided in **gl_Position** in the vertex shader file.
+
+By dividing the x,y position of the pixel (gl_FragCoord.xy) by the width,height of the canvas (u_resolution.xy)
+we get normalized coordinates in the range: 0.0-1.0! 
+So st.x is going from 0 to 1 in the x-axis, and st.y is going from 0 to 1 in the y-axis.
+
+It is a standard convention when writing shaders to call this variable **st**.
+
+If were are going to use the positions of the pixels at all in our shaders, we should make it a habit to start our shaders by doing this.
+
+```glsl
+vec2 st = gl_FragCoord.xy/u_resolution.xy; 
+```
+
+We end our code by setting the color of the pixel **gl_FragColor**, as always (remember this must always be done or else your code won't run). 
+
+We can now make a gradient from black to red in the x-axis, if we use the **st.x** variable as input.
+
+```glsl
+// R = dependent on pixel location in x-axis, from 0 to 1, G = 0, B = 0, A = 1
+gl_FragColor = vec4(st.x,0.0,0.0,1.0); 
+
+
+```
+
+You could also make the green color dependent on the pixel location in the x-axis.
+Or use both the st.x and st.y to decide the color of the pixel.
+
+
+```glsl
+// R = 0, G = dependent on pixel location in x-axis, from 0 to 1, B = 0, A = 1
+gl_FragColor = vec4(0.0,st.x,0.0,1.0); 
+
+// R = dependent on pixel location in x-axis, G = dependent on pixel location in y-axis, B = 0, A = 1
+gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
+```
+
+* NOTE: You can only have one gl_FragColor active at a time, so make sure you are only setting it once.*
+
 
 
 ### shader.frag file
@@ -227,44 +277,24 @@ uniform vec2 u_resolution; // This is passed in as a uniform from the sketch.js 
 
 void main() {
 
-  /*
-
-  We get the position of each pixel on our canvas from gl_FragCoord.xy (a built in shader function).
-
-  
-
-     By dividing the x,y position of the pixel (gl_FragCoord.xy) by the width,height of the canvas (u_resolution.xy)
-
-     we get normalized coordinates in the range: 0.0-1.0!
-
-     Meaning st.x and st.y goes from 0.0 in the lower left corner to 1.0 in the upper right corner.
-
-     We always start our shaders by doing this.
-
-  */
-
-	vec2 st = gl_FragCoord.xy/u_resolution.xy;
+  // position of the pixel divided by resolution, to get normalized positions on the canvas
+  vec2 st = gl_FragCoord.xy/u_resolution.xy; 
 
   // Lets use the pixels position on the x-axis as our gradient for the red color
-
-  // Where the position is closer to 0.0 we get black,
-
-  // Where the postiion is closer to width (defined as 1.0) we get red 
+  // Where the position is closer to 0.0 we get black (st.x = 0.0)
+  // Where the position is closer to width (defined as 1.0) we get red (st.x = 1.0)
 
   gl_FragColor = vec4(st.x,0.0,0.0,1.0); // R,G,B,A
 
-  
 
   // you can only have one gl_FragColor active at a time, but try commenting the others out
-
   // try the green channel
 
   //gl_FragColor = vec4(0.0,st.x,0.0,1.0); 
 
-  
 
   // try both the x position and the y position
-
+  
   //gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
 
 }
