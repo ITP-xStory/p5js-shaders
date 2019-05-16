@@ -85,7 +85,7 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 Variable qualifiers go before the variable type and name to determine how the variable will be used.
 ### Using Const
 Const is short for Constant, which is a variable that never changes in the life of our program.
-Unlike p5, constants like PI are not in shader code. So in order to use PI in our code we have to define the constant PI in our code.
+Unlike p5, constants like PI are not native to shader code. So in order to use PI in our code we have to define the constant PI in our code.
 There are two ways of doing this:
 ```glsl
 const float PI = 3.14159265358979323846;
@@ -96,8 +96,26 @@ or
 ```
 Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. This is theoretically faster and more efficient because it is not a variable stored in memory.
 
-### Using Uniforms 
 ### Using Attributes
+
+### Using Uniforms
+Uniforms are constant variables (constant per frame) that can be accessed by all of the parallel threads in our GPU (remember the Mona Lisa pipes example). It is called a uniform because the information being received by each thread is equal, as a result of this necessity of data uniformity, each thread can read the input data but cannot modify it.
+The important thing to know about uniforms is that they are how we can pass information from the CPU to GPU, or in other words, from p5 to our shader code.
+
+The most common uniforms to pass from p5 are time, resolution, and mouse coordinates.
+Below is our code to send those uniforms in p5.
+```javascript
+theShader.setUniform("resolution", [width, height]);
+theShader.setUniform("time", millis() / 1000.0); // we divide millis by 1000 to convert it to seconds
+theShader.setUniform("mouse", [mouseX, map(mouseY, 0, height, height, 0)]); // we flip Y so it's oriented properly in our shader
+```
+Then in our fragment shader (.frag) we must recieve the uniforms and define their type (vec2, float, etc.)
+```glsl
+uniform vec2 resolution;
+uniform float time;
+uniform vec2 mouse;
+```
+
 ### Using Varying
 ### Other common variables
 
