@@ -97,9 +97,26 @@ or
 Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. This is theoretically faster and more efficient because it is not a variable stored in memory.
 
 ### Using Attributes
+Attributes are per-vertex parameters, as a result of this they are only used in our vertex file (.vert). They are typically used to recieve vertex data from p5, which is then converted to a usable format and passed to our fragment shader.
+
+Our vert code:
+```glsl
+// our vertex data from WEBGL/p5
+attribute vec3 aPosition;
+
+void main() {
+  // copy the position data into a vec4
+  // we're using 1.0 as the w component (which controls scaling/normalization of the coordinates)
+  vec4 positionVec4 = vec4(aPosition, 1.0);
+  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+
+  // send the vertex information on to the fragment shader
+  gl_Position = positionVec4;
+}
+```
 
 ### Using Uniforms
-Uniforms are constant variables (constant per frame) that can be accessed by all of the parallel threads in our GPU (remember the Mona Lisa pipes example). It is called a uniform because the information being received by each thread is equal, as a result of this necessity of data uniformity, each thread can read the input data but cannot modify it.
+Uniforms are constant variables (constant per frame) that can be accessed by all of the parallel threads in our GPU (remember the Mona Lisa painted by pipes example). It is called a uniform because the information being received by each thread is equal, as a result of this necessity of uniformity, each thread can read the input data but cannot modify it.
 The important thing to know about uniforms is that they are how we can pass information from the CPU to GPU, or in other words, from p5 to our shader code.
 
 The most common uniforms to pass from p5 are time, resolution, and mouse coordinates.
@@ -117,6 +134,8 @@ uniform vec2 mouse;
 ```
 
 ### Using Varying
+Varying are per-fragment (per-pixel) parameters. They vary from pixel to pixel, as a result of this they are only used in our fragment shader (.frag).
+
 ### Other common variables
 
 
