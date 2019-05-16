@@ -256,7 +256,7 @@ gl_FragColor = vec4(0.0,st.x,0.0,1.0);
 gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
 ```
 
-* NOTE: You can only have one gl_FragColor active at a time, so make sure you are only setting it once.*
+*NOTE: You can only have one gl_FragColor active at a time, so make sure you are only setting it once.*
 
 
 
