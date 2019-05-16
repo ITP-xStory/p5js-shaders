@@ -116,7 +116,7 @@ void main() {
 ```
 
 ### Using Uniforms
-Uniforms are constant variables (constant per frame) that can be accessed by all of the parallel threads in our GPU (remember the Mona Lisa painted by pipes example). It is called a uniform because the information being received by each thread is equal, as a result of this necessity of uniformity, each thread can read the input data but cannot modify it.
+Uniforms are constant variables, but unlike consts they are constant per frame, which means that they can be updated between draw calls. Uniforms can be accessed by all of the parallel threads in our GPU (remember the Mona Lisa painted by pipes example). They are called uniforms because the information being received by each thread is the same, as a result of this necessity of uniformity for all threads, each thread can read the input data but cannot modify it.
 The important thing to know about uniforms is that they are how we can pass information from the CPU to GPU, or in other words, from p5 to our shader code.
 
 The most common uniforms to pass from p5 are time, resolution, and mouse coordinates.
