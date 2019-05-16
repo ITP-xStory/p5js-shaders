@@ -83,7 +83,7 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 
 ## Variable Qualifiers
 Variable qualifiers go before the variable type and name to determine how the variable will be used.
-### Using Const
+### Using Const or #define
 Const is short for Constant, which is a variable that never changes in the life of our program.
 Unlike p5, constants like PI are not native to shader code. So in order to use PI in our code we have to define the constant PI in our code.
 There are two ways of doing this:
