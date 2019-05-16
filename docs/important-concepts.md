@@ -161,7 +161,7 @@ void main(){
   vec2 uv = vTexCoord;
 }
 ```
-### Other common variables
+
 
 
 
