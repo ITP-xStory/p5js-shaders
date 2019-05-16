@@ -120,13 +120,13 @@ Uniforms are constant variables (constant per frame) that can be accessed by all
 The important thing to know about uniforms is that they are how we can pass information from the CPU to GPU, or in other words, from p5 to our shader code.
 
 The most common uniforms to pass from p5 are time, resolution, and mouse coordinates.
-Below is our code to send those uniforms in p5.
+Our p5 code to send those 3 uniforms:
 ```javascript
 theShader.setUniform("resolution", [width, height]);
 theShader.setUniform("time", millis() / 1000.0); // we divide millis by 1000 to convert it to seconds
 theShader.setUniform("mouse", [mouseX, map(mouseY, 0, height, height, 0)]); // we flip Y so it's oriented properly in our shader
 ```
-Then in our fragment shader (.frag) we must recieve the uniforms and define their type (vec2, float, etc.)
+Then in our fragment shader (.frag) we must recieve the uniforms and define their type (vec2, float, etc.):
 ```glsl
 uniform vec2 resolution;
 uniform float time;
@@ -134,8 +134,31 @@ uniform vec2 mouse;
 ```
 
 ### Using Varying
-Varying are per-fragment (per-pixel) parameters. They vary from pixel to pixel, as a result of this they are only used in our fragment shader (.frag).
+Varying are per-fragment (per-pixel) parameters. They vary from pixel to pixel, unlike uniforms which are same for all pixels.
+Varying are typically used to pass texture coordinates that we get from WEBGL/p5 through our vertex shader to our fragment shader.
+Our vert code:
+```glsl
+// I'm excluding our normal vertex position data operations from this example code.
+// get our texture coordinates from WEBGL/p5
+attribute vec2 aTexCoord;
+// create a varying vec2 which will store our texture coordinates
+varying vec2 vTexCoord;
 
+void main() {
+  // copy the texcoords
+  vTexCoord = aTexCoord;
+ }
+```
+Our frag code:
+```glsl
+// grab our textures coordinates from vert shader
+varying vec2 vTexCoord;
+
+void main(){
+  //set our uv coordinates to our texture coordinates
+  vec2 uv = vTexCoord;
+}
+```
 ### Other common variables
 
 
