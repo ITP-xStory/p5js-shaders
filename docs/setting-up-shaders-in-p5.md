@@ -115,9 +115,11 @@ Which is not a bad thing because Glitch is a great servic that can host your cod
 
 To get started, visit our [glitch template page](https://glitch.com/edit/#!/shader-template) and click "Remix to Edit" in the top right corner.
 
-![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/shader_template_login.png?raw=true)
+![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/shader_template_remix.png?raw=true)
 
 You'll immediately be able to start making your own p5.js / shader sketch. You'll need to make an account if you want to save your sketch, just click sign in at the top right and make an account. Logging into Github or other accounts is also an option.
+
+![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/shader_template_login.png?raw=true)
 
 
 
