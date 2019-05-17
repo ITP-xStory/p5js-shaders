@@ -13,7 +13,8 @@ Below is an example comparing the same operation (distance from mouse) to change
     alt="shader-performance-1 on Glitch"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
-</div><br></br>
+</div>
+<br></br>
 This huge difference in performance (7 fps vs 150 fps depending on the machine) is due to p5 performing this operation in sequence versus the shader performing it in parallel, more on this in [What are shaders?](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).
 
 --------------------->>>>>>>>>>
