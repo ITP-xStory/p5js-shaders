@@ -17,12 +17,14 @@ This might sound confusing, but it is actually really smart, because it makes ou
 
 ^^^^^^^^^^^^^check this.
 
+
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
     src="https://glitch.com/embed/#!/embed/normal-coord-vs-normalized?path=uniform.frag&previewSize=100"
     alt="normal-coord-vs-normalized on Glitch"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
+  
 
 ## Floating point values are important
 Since everything is defined between 0 and 1. Always write out the whole floating point value, including the punctuation! Do not write (0,0,1) for blue, write (0.0, 0.0, 1.0). Graphics cards can be more or less picky about this, but if you have a picky graphics card, the shader will not run!
