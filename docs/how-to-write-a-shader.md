@@ -10,7 +10,7 @@ It's important to note that these files are written in GLSL (OpenGL Shading Lang
 The .vert file handles everything that has to do with vertexes - that is all of your geometry (shapes) and its position on the canvas. The .frag file handles everything that has to do with the actual coloring of the pixels.
 
 The programs run like this:
-The .vert file is run first, and automatically passes the calculations we do about the geometry (shapes) on our canvas on to the .frag file. The fragment file then colors the pixels according to their positions!
+The .vert file is run first, and automatically passes the calculations we do with the geometry (shapes) on our canvas on to the .frag file. The fragment file then colors the pixels according to their positions!
 
 *The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
 
