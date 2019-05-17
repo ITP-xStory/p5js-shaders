@@ -4,7 +4,7 @@ Shaders are used all around us, so you have definitely used them before even tho
 
 A shader is a small program that runs entirely on your graphics card, the GPU (Graphics Processing Unit), rather than the CPU (Central Processing Unit) of your computer. This makes it incredible fast. They are actually easy to write, and simple to implement in p5, once you understand the basics of how they work.
 
-Since a shader is it's own script you simply place it in a seperat file from your p5 sketch.js, just like when you load in a soundfile or image, but we will get to that in a moment. First it is important to understand why shaders are different from the programming you normally do when you write your p5 sketch. 
+Since a shader is it's own script you simply place it in a seperate file from your p5 sketch.js, just like when you load in a soundfile or image, but we will get to that in a moment. First it is important to understand why shaders are different from the programming you normally do when you write your p5 sketch. 
 
 
 ### How does a shader work?
