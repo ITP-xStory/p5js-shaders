@@ -1,4 +1,5 @@
 # How to write a shader
+**aka the anatomy of a shader**
 
 Now let's talk about the shader files we're loading.
 
