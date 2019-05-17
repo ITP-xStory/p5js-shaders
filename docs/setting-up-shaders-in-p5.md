@@ -108,3 +108,14 @@ ___________________________________________
 # Setting up p5.js in Glitch
 
 
+Unfortunately at the moment shader files are not supported in the p5 editor,
+so the easiest way to get started using shaders in p5 is to use Glitch.com.
+
+Which is not a bad thing because Glitch is a great servic that can host your code with custom urls and you'll be able to view and remix all of our examples there.
+
+To get started, visit our [glitch template page](https://glitch.com/edit/#!/shader-template) [https://glitch.com/edit/#!/shader-template](https://glitch.com/edit/#!/shader-template) and click "Remix to Edit" in the top right corner.
+
+You'll immediately be able to start making your own p5.js / shader sketch. You'll need to make an account if you want to save your sketch, just click sign in at the top right and make an account. Logging into Github or other accounts is also an option.
+
+
+
