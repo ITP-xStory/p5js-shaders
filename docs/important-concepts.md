@@ -34,9 +34,15 @@ _________________________________________
 
 ## Making and changing variables
 
-By now you will have noticed that we are using vectors (vec3, vec4 etc.) a lot in shaders. We use them to enter in our numbers for different variables. This is simply how we write our variables, just like you might know types such as integers and floats from other programming languages.
+It is important to note that GLSL (our shader language) is strongly typed. What this means is that we have to define the type of all of our variables (int, float, vec2, etc.). This is different from Javascript where we simply say ***let myVariable*** and it figures out what type it is from the data we store in it. This also means we can't change the type of data a variable holds on the fly like in Javascript, or pass an int when a function is expecting a float.
 
-We need to tell the variable how many numbers they will contain, so we use these types: float, vec2, vec3, vec4, vec5 etc. The number is the amount of parameters you intend to use. 
+At first it will be confusing to have to type **vec2 position** or **float scale** for every variable but you'll get used to it in no time.
+
+### The wonders of vectors
+
+By now you will have noticed that we are using vectors (vec3, vec4 etc.) a lot in shaders. Vectors are used when we need a variable to hold two or more numbers.  If we only need the variable to hold one number we use float or int, otherwise we say vec2, vec3, vec4, vec5 etc. The number is the amount of parameters you intend to use. 
+
+In math vectors are used to positions or directions, but in shader land vectors are also used to store colors.
 
 ```glsl
 float scalar = 5.2; 			// a scalar that could be used to manipulate color or position
@@ -48,7 +54,6 @@ vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
 vec4 colorWithAlpha = vec4(0.0, 0.0, 1.0, 0.5); 	// blue color that is half transparent A = 0.5
 
 ```
-
 
 What is neat about constructing our variables like this, is that we can access their components very easily.
 
@@ -62,7 +67,7 @@ float blueComponent = color.r; 		// B = 1.0
 
 ```
 
-If we write color.rgb we get all three.
+If we write color.rgb we get all three. 
 We could even write color.xyz, the shader does not know that some numbers are a color and some are a position, it just knows that you are accesing the components of a vector. This is called [**Swizzling**](https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Swizzling).
 
 ```glsl
