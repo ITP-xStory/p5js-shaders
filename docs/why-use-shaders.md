@@ -18,7 +18,7 @@ Below is an example comparing the same operation (distance from mouse) to change
 --------------------->>>>>>>>>>
 
 
-### The power of shaders
+### Visual Complexity
 
 ....but you will see how a shader works and how fast it runs even though we are putting some pretty complex graphics in your sketch.
 
