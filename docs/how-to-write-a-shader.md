@@ -35,7 +35,7 @@ precision mediump float;
 
 
 
-Then we make something called **attributes**, these contain information that is automatically sent to the shader by the p5 sketch.
+Then we make something called **attributes**, these contain information that is automatically sent to the shader by the p5 sketch. [For more on attributes.](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts?id=using-attributes)
 
 For shaders in p5 we must make sure one thing is always done in the .vert file: The pixel must be told where on the canvas it belongs! This attribute is called **vec3 aPosition**. You cannot change its name, and the attribute is read-only, meaning you cannot overwrite it. Attributes are usually named with in "a" as a prefix: "aSomething".
 
