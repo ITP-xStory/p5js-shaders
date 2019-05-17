@@ -183,7 +183,14 @@ Now that we know that every position is defined as a floating point number betwe
 
 # Shader Code: Gradient fill
 
-[https://gradient-color.glitch.me](https://gradient-color.glitch.me)
+<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+  <iframe
+    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+    src="https://glitch.com/embed/#!/embed/gradient-color?path=uniform.frag&previewSize=100"
+    alt="gradient-color on Glitch"
+    style="height: 100%; width: 100%; border: 0;">
+  </iframe>
+</div>
 
 The following code makes a gradient depending on the position of the pixel on your canvas. The vertex shader file is the same as always.
 
