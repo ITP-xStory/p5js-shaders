@@ -53,8 +53,7 @@ void main(){
 ```
 In our frag we don't have to specify that gl_FragColor is going out and gl_FragCoord is coming in, and we use the prefix "gl_" which is convention for built in variables.
 
-### Example:
-#### [Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)
+### Example — [Recursive Noise Experiment by ompuco:](https://www.shadertoy.com/view/wllGzr)
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
