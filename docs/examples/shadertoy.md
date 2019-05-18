@@ -65,7 +65,8 @@ In our frag we don't have to specify that gl_FragColor is going out and gl_FragC
 ***
 
 ### Example
-**[Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)** <br><br>
+**[Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)**
+
 **Original Shadertoy Code:**
 ```glsl
 float hash( float n )
