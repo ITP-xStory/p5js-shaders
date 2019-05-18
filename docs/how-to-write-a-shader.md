@@ -12,10 +12,12 @@ The [**.vert file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-w
 The [**.frag file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shaderfrag-file) handles everything that has to do with the actual coloring of the pixels, and ends with setting the built in variable called **gl_FragColor** equal to a color. The .frag file handels "per-fragment" (per-pixel) operations. It is good practice to use this shader just for coloring of the pixels.
 
 
-**The programs run like this:**
+**The shader program runs like this:**
 The .vert file is run first, and automatically passes the calculations we do with the geometry (shapes) on our canvas on to the .frag file. The fragment file then colors the pixels according to their positions!
 
 *The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
+
+If you are interested in diving deeper, this [wikibook page on OpenGL](https://en.wikibooks.org/wiki/GLSL_Programming/OpenGL_ES_2.0_Pipeline) is a great ressource.
 
 
 
