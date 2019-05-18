@@ -1,6 +1,11 @@
 # What are shaders?
 
-Shaders are used all around us, so you have definitely seen them before, even though you have never written one yourself. If you play computer games, then every 3D object in it has a shader attached to the it. The shader decides what color the object takes, but also how light bounces off the object, whether it is transparent and much more. Also, if you have ever been to a concert where there were visuals which reacted to the sound or movements, these were likely shaders! 
+Shaders are used all around us, so you have definitely seen them before, even though you have never written one yourself.
+Shaders are necessary for fast real-time rendering of graphics, from computer games to concert visuals.
+
+If you play computer games, then every 3D object in it has a shader attached to the it's material. The shader decides what color the object takes, but also how light bounces off the object, whether it is transparent and much more. Also, if you have ever been to a concert where visuals were reacting to the sound or movements, these were likely shaders!
+
+
 
 A shader is a small program that runs entirely on your graphics card, the GPU (Graphics Processing Unit), rather than the CPU (Central Processing Unit) of your computer. This makes it incredible fast. They are actually easy to write, and simple to implement in p5, once you understand the basics of how they work.
 
