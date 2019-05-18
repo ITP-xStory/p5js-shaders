@@ -8,7 +8,7 @@ just make sure however to give proper attribution and pay attention to any licen
 ***
 
 ### u_uniform vs iUniform
-In shadertoy code your vert code is handled for you, as well as having many included shader inputs (uniforms). These uniforms are identified by a "i" prefix, ex: iMouse. A big part of using converting shadertoy code to p5.js is figuring out and sending each uniform the data that it needs.
+In shadertoy code your vert code is handled for you, as well as having many included shader inputs (uniforms). These uniforms are identified by an "i" prefix, ex: iMouse. A big part of using converting shadertoy code to p5.js is figuring out and sending each uniform the data that it needs.
 
 To save myself the hassle of converting all the uniforms names in the shadertoy code, I simply pass it the uniforms the way it's named in the code:
 
