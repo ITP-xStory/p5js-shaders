@@ -4,7 +4,7 @@
 
 If you've ever used [**loadPixels()**](https://p5js.org/reference/#/p5/loadPixels), [**set()**](https://p5js.org/reference/#/p5/set), and [**updatePixels()**](https://p5js.org/reference/#/p5/updatePixels) and done even simple pixel-by-pixel math in p5.js then you're aware of the limitations of working in that way.
 
-Below is an example comparing the same operation (distance from mouse) to change pixel color values, first using loadPixels in p5 and then using a shader loaded in p5. Click the buttons in the top left of the sketch to see the difference in performance.
+Below is an example comparing the same operation (distance from mouse) to change the brightness of pixels in an image, first using loadPixels in p5 and then using a shader loaded in p5. Click the buttons in the top left of the sketch to see the difference in performance. Look at those kittens. They deserve better than loadPixels.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -17,7 +17,7 @@ Below is an example comparing the same operation (distance from mouse) to change
 
 ***
 
-This huge difference in performance (7 fps vs 150 fps depending on the machine) is due to p5 performing this operation in sequence versus the shader performing it in parallel, more on this in [What are shaders?](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).
+This huge difference in performance (4 fps vs 150 fps depending on the machine) is due to p5 performing this operation in sequence versus the shader performing it in parallel, more on this in [What are shaders?](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).
 
 ### Visual Complexity
 
