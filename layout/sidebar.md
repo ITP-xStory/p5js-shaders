@@ -1,17 +1,17 @@
 * Getting started
-    * [Introduction p5.js shader](/)
+    * [Introduction to p5.js shaders](/)
     * [Why use shaders?](./docs/why-use-shaders.md)
     * [What are shaders?](./docs/what-are-shaders.md)
-    * [Setting up shaders in p5](./docs/setting-up-shaders-in-p5.md)
+    * [Setting up shaders in p5.js](./docs/setting-up-shaders-in-p5.md)
     * [How to write a shader](./docs/how-to-write-a-shader.md)
     * [Important shader concepts](./docs/important-concepts.md) 
     
 * Examples
    * [Basic](./docs/examples/basic.md)
-   * [Texture Coordinates (Matrix Operation)](./docs/examples/texture_coordinates.md)
+   * [Texture Coordinates](./docs/examples/texture_coordinates.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
-   * [Applying Shaders to Shapes p5](./docs/examples/shaders_to_shapes.md)
-   * [Image Effects / Image Processing](./docs/examples/image_effects.md)
+   * [Applying Shaders to Shapes](./docs/examples/shaders_to_shapes.md)
+   * [Image Effects](./docs/examples/image_effects.md)
    * Working with Other Resources
       * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
       * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
