@@ -20,7 +20,7 @@ In this guide you will learn what a shader is, how to use it efficiently in p5, 
 Consider this the "booklet of shaders". A great way to start familiarizing yourself with making amazing graphics for your projects in p5 and a simple introduction to shaders.
 Then, if you find yourself entranced by the world of shaders (like we do) please see the section on moving further with shaders, where we have collected some of the best sources online for finding shaders and learning more.
 
-One of these, ["The book of shaders"](https://thebookofshaders.com/) by Patricio Gonzalez Vivo and Jen Lowe, is a truly great ressource if you want to dive deeper into the technical details of shaders, and we will be borrowing some explanations from this online book.
+One of these, ["The Book of Shaders"](https://thebookofshaders.com/) by Patricio Gonzalez Vivo and Jen Lowe, is a truly great resource if you want to dive deeper into the technical details of shaders, and we will be borrowing some explanations from this online book.
 
 
 ### Thank you
