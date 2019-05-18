@@ -90,7 +90,6 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 
 ```
 
------------->>>>>>>>> 
 
 ## Variable Qualifiers
 Variable qualifiers go before the variable type and name to determine how the variable will be used.
