@@ -65,8 +65,7 @@ In our frag we don't have to specify that gl_FragColor is going out and gl_FragC
 ***
 
 ### Example
-**[Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)**
-
+**[Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)**<br>
 **Original Shadertoy Code:**
 ```glsl
 float hash( float n )
@@ -132,7 +131,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 }
 ```
 **p5.js code version:**
-###.js file
+### .js file
 ```javascript
 // a shader variable
 let theShader;
@@ -164,7 +163,7 @@ function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
 }
 ```
-###.frag file
+### .frag file
 ```glsl
 // this is a port of "recursive noise experiment" by ompuco
 // https://www.shadertoy.com/view/wllGzr
@@ -239,7 +238,7 @@ void main()
     gl_FragColor = vec4(col,1.0);
 }
 ```
-###.vert file
+### .vert file
 ```glsl
 // our vertex data
 attribute vec3 aPosition;
