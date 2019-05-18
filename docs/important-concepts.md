@@ -183,7 +183,7 @@ Now that we know that every position is defined as a floating point number betwe
 
 # Shader Code: Gradient fill
 
-The following code makes a gradient depending on the position of the pixel on your canvas. The vertex shader file is the same as always.
+The following code makes a gradient depending on the position of the pixels on your canvas. The vertex shader file is the same as always.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
