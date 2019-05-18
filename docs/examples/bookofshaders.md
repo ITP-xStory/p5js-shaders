@@ -1,4 +1,4 @@
-# Going through the Book of Shaders with p5
+# Going through the Book of Shaders with p5.js
 
 You may have noticed we reference [the Book of Shaders](https://thebookofshaders.com/) a lot and that is for a good reason.
 It is a great place to start learning about shaders (that's where we started) and we highly recommend that if we've piqued your interest with our guide that you dive deeper with Patricio.
