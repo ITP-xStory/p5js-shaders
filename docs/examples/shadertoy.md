@@ -53,6 +53,9 @@ void main(){
 ```
 In our frag we don't have to specify that gl_FragColor is going out and gl_FragCoord is coming in, and we use the prefix "gl_" which is convention for built in variables.
 
+### Example:
+#### [Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)
+
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
@@ -62,11 +65,7 @@ In our frag we don't have to specify that gl_FragColor is going out and gl_FragC
   </iframe>
 </div>
 
-***
-
-### Example:
-#### [Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)
-#### Original Shadertoy Code:
+#### Shadertoy code:
 ```glsl
 float hash( float n )
 			{
@@ -130,7 +129,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     fragColor = vec4(col,1.0);
 }
 ```
-### p5.js code version:
+### p5.js code:
 #### .js file:
 ```javascript
 // a shader variable
