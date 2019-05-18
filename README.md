@@ -1,4 +1,4 @@
-# Welcome to p5.js shader
+# Welcome to p5.js shaders
 
 Shaders are a great way to make graphics for your projects. So far you have probably made graphic shapes like [**rect()**](https://p5js.org/reference/#/p5/rect) or [**ellipse**()](https://p5js.org/reference/#/p5/ellipse) or maybe even 3D shapes like a [**plane**()](https://p5js.org/reference/#/p5/plane) or a [**box**()](https://p5js.org/reference/#/p5/box), and you should be more than familiar with using [**fill()**](https://p5js.org/reference/#/p5/fill) to decide the color of these objects. But wouldn't it be great if we could make these objects have moving graphics on them? And without slowing down our sketch?
 
