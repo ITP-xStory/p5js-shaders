@@ -6,16 +6,19 @@ Enter the shader!
 
 ---------->>>>>>>> (IMG different examples of shaders on stuff in p5)
 
-In this tutorial you will learn what a shader is, how to use it efficiently in p5, and how to make your own!
+In this guide you will learn what a shader is, how to use it efficiently in p5, and how to make your own!
 
 Consider this the "booklet of shaders". A great way to start familiarizing yourself with making amazing graphics for your projects in p5 and an introduction to shaders. Then, if you find yourself entranced by the world of shaders (like we do) please see the section on moving further with shaders, where we have collected some of the best sources online for finding shaders and learning more.
 
 
 ### Thank you
-This tutorial is an open-source project made during xStory at [ITP NYU](https://tisch.nyu.edu/itp) by [Casey Conchinha](https://github.com/kcconch) and [Louise Lessél](http://www.louiselessel.com).
+This guide is an open-source project made during xStory at [ITP NYU](https://tisch.nyu.edu/itp) by [Casey Conchinha](https://github.com/kcconch) and [Louise Lessél](http://www.louiselessel.com).
 
 We want to thank the following people for help and guidance during the project:
 
 Adam Ferris, for laying the groundwork for the entire project with his own [p5 shader github repo](https://github.com/aferriss/p5jsShaderExamples). 
 
-Or Fleisher, Kyle Phillips, Sehyun Kim for being our mentors.
+Or Fleisher, Kyle Phillips, and Sehyun Kim for being our mentors.
+
+Stalgia Grigg and Kate Hollenbach for answering our p5.js shader implementation questions.
+
