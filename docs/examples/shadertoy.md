@@ -10,8 +10,27 @@ just make sure however to give proper attribution and pay attention to any licen
 ### u_uniform vs iUniform
 In shadertoy code your vert code is handled for you, as well as having many included shader inputs (uniforms). These uniforms are identified by a "i" prefix, ex: iMouse. A big part of using converting shadertoy code to p5.js is figuring out and sending each uniform the data that it needs.
 
+To save myself the hassle of converting all the uniforms names in the shadertoy code, I simply pass it the uniforms the way it's named in the code:
+
+```javascript
+  theShader.setUniform("iResolution", [width, height]);
+  theShader.setUniform("iFrame", frameCount);
+  theShader.setUniform("iMouse", [mouseX, map(mouseY, 0, height, height, 0)]);
+```
+
+and dont forget to receive them at the top of the frag file:
+
+```glsl
+uniform vec2 iResolution;
+uniform int iFrame;
+uniform vec2 iMouse;
+```
+It is also important to change fragCoord to gl_FragCoord, and fragColor to gl_FragColor.
+And to change void mainImage to void main, and remove it's arguments
+
+
 # Example - [Recursive Noise Experiment by ompuco](https://www.shadertoy.com/view/wllGzr)
-## Shadertoy Code
+## Original Shadertoy Code
 ```glsl
 float hash( float n )
 			{
