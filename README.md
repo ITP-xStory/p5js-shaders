@@ -13,8 +13,6 @@ Enter the shader!
   </iframe>
 </div>
 
----------->>>>>>>> (IMG different examples of shaders on stuff in p5)
-
 In this guide you will learn what a shader is, how to use it efficiently in p5, and how to make your own!
 
 Consider this the "booklet of shaders". A great way to start familiarizing yourself with making amazing graphics for your projects in p5 and a simple introduction to shaders.
