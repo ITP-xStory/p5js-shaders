@@ -14,7 +14,7 @@ After you've learned [how to setup up shaders in p5](https://itp-xstory.github.i
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/speckled-petalite?path=shader.frag&previewSize=0"
+    src="https://glitch.com/embed/#!/embed/domain-warping-bos?path=shader.frag&previewSize=100"
     alt="speckled-petalite on Glitch"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
