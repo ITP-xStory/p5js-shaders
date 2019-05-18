@@ -13,9 +13,7 @@ This might sound confusing, but it is actually really smart, because it makes ou
   * So position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader.
   * Position x = width, y = height or (width, height) for a sketch, is position (1.0, 1.0) for the shader.
 
-*This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner!*
-
-^^^^^^^^^^^^^check this.
+*This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner! This is contrary to the p5 canvas, which has (0,0) in the upper left corner, and (width,height) in the bottom right corner. So do not get confused. *
 
 In this example, as you move your mouse you can see the pixel location (white box) and the normalized location (blackbox) of your cursor:
 
