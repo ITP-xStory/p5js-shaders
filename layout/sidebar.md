@@ -5,10 +5,6 @@
     * [Setting up shaders in p5](./docs/setting-up-shaders-in-p5.md)
     * [How to write a shader](./docs/how-to-write-a-shader.md)
     * [Important shader concepts](./docs/important-concepts.md) 
-    * [Examples](./docs/examples.md)
-
-* Advanced
-    * [Pixel shaders are fun](/) 
     
 * Examples
    * [Basic](./docs/examples/basic.md)
