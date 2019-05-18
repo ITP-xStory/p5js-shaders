@@ -21,7 +21,7 @@ This huge difference in performance (4 fps vs 150 fps depending on the machine) 
 
 ### Visual Complexity
 
-....but you will see how a shader works and how fast it runs even though we are putting some pretty complex graphics in your sketch.
+If you're interested in creating complex but performative graphics in the browser, or to just add to your aesthetic possiblities in p5.js, then shaders (and this guide) are for you.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
