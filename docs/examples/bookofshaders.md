@@ -11,6 +11,8 @@ After you've learned [how to setup up shaders in p5](https://itp-xstory.github.i
   theShader.setUniform("u_mouse", [mouseX, map(mouseY, 0, height, height, 0)]);
 ```
 
+### [Example from Book of Shaders](https://thebookofshaders.com/13/)
+
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
