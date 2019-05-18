@@ -18,6 +18,7 @@
    * [Image Effects / Image Processing](./docs/examples/image_effects.md)
    * Working with Other Resources
       * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
+      * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
    * [Experimental (Not Working 100%)](./docs/examples/experimental.md)
 
 * Learn more
