@@ -16,7 +16,7 @@
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
    * [Applying Shaders to Shapes p5](./docs/examples/shaders_to_shapes.md)
    * [Image Effects / Image Processing](./docs/examples/image_effects.md)
-   * [Working with Other Resources](./docs/examples/other_resources.md)
+   * [Working with Other Resources](./docs/examples/shadertoy.md)
    * [Experimental (Not Working 100%)](./docs/examples/experimental.md)
 
 * Learn more
