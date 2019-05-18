@@ -4,6 +4,15 @@ Shaders are a great way to make graphics for your projects. So far you have prob
 
 Enter the shader!
 
+<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+  <iframe
+    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+    src="https://glitch.com/embed/#!/embed/shader-as-texture?path=texture.frag&previewSize=100"
+    alt="shader-as-texture on Glitch"
+    style="height: 100%; width: 100%; border: 0;">
+  </iframe>
+</div>
+
 ---------->>>>>>>> (IMG different examples of shaders on stuff in p5)
 
 In this guide you will learn what a shader is, how to use it efficiently in p5, and how to make your own!
