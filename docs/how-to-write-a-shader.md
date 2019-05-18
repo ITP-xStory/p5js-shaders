@@ -7,9 +7,12 @@ To make a shader you must make two files in your p5 sketch folder: A **"shader.v
 
 It's important to note that these files are written in GLSL (OpenGL Shading Language), which is a lower level language than Javascript, meaning it speaks more directly to your computer, specifically to your GPU. The code will seem foreign and confusing at first, but with time we can develop more of an understanding of what is going on.
 
-The .vert file handles everything that has to do with vertexes - that is all of your geometry (shapes) and its position on the canvas. The .frag file handles everything that has to do with the actual coloring of the pixels.
+The [**.vert file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shadervert-file) handles everything that has to do with vertexes - that is all of your geometry (shapes) and its position on the canvas. A *vertex* is another name for the corner points of your shape, so if you have a [**rect()**](https://p5js.org/reference/#/p5/rect), there are four vertexes. More complex shapes like 3D models have more vertexes, and when all of these are connected this is known as a "mesh". A [**Sphere()**](https://p5js.org/reference/#/p5/sphere) is a good example of a mesh in p5. The .vert file handles "per-vertex" operations, so it is good shader practice to place code that has to do with a pixel's position on the mesh here. For our first examples we will just be using a rectangle that covers the entire canvas, so the .vert file is very simple.
 
-The programs run like this:
+The [**.frag file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shaderfrag-file) handles everything that has to do with the actual coloring of the pixels, and ends with setting the built in variable called **gl_FragColor** to a color. The .frag file handels "per-fragment" (per-pixel) operations. It is good practice to use this shader just for coloring of the pixels.
+
+
+**The programs run like this:**
 The .vert file is run first, and automatically passes the calculations we do with the geometry (shapes) on our canvas on to the .frag file. The fragment file then colors the pixels according to their positions!
 
 *The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
@@ -18,7 +21,7 @@ The .vert file is run first, and automatically passes the calculations we do wit
 
 ## Content of a shader.vert file
 
-First we write some necessary definitions that let your GPU know how to render the shader. You should not worry too much about this when just starting out with shaders. Just include it. 
+First we write some necessary definitions that let your GPU know how to render the shader. You should not worry too much about this when just starting out with shaders. But it is nice to know, so we will explain it briefly.
 
 [GL_ES](https://www.khronos.org/opengles/) is a shader API which is automatically used by your GPU, if you are displaying the shader in a browser or on a mobile platform. #ifdef means "if defined". It simply makes a global setting for how precise we want our graphics rendered depending on where we are viewing them. So if we are in a browser, they will get the level of precision we define here. In this case we are setting all floating point numbers in our code to have "medium" precision. This is really important for making smooth color gradients,
 
