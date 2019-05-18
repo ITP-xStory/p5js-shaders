@@ -17,7 +17,7 @@ This might sound confusing, but it is actually really smart, because it makes ou
 
 ^^^^^^^^^^^^^check this.
 
-In this example, as you move your mouse you can see the pixel location (white box) and the normalized location (blackbox) of your cursor.
+In this example, as you move your mouse you can see the pixel location (white box) and the normalized location (blackbox) of your cursor:
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
