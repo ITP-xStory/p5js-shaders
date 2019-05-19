@@ -272,7 +272,7 @@ We will use the knowledge that:
 ### shader.vert file
 The vertex shader file is the same as [always](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shadervert-file).
 
-```glsl
+```vert
 
 #ifdef GL_ES
 
@@ -358,9 +358,9 @@ gl_FragColor = vec4(st.x,st.y,0.0,1.0);
 
 
 
-This complete shader.frag file looks like this:
+The complete shader.frag file looks like this:
 
-```glsl
+```frag
 
 #ifdef GL_ES
 
