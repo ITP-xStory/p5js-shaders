@@ -11,7 +11,7 @@
    * [Texture Coordinates](./docs/examples/texture_coordinates.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
    * [Applying Shaders to Shapes](./docs/examples/shaders_to_shapes.md)
-   * [Image Effects](./docs/examples/image_effects.md)
+   * [Image Effects (Webcam)](./docs/examples/image_effects.md)
    * Working with Other Resources
       * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
       * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
