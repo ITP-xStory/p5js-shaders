@@ -34,5 +34,5 @@ Or Fleisher, Kyle Phillips, and Sehyun Kim for being our mentors.
 
 Stalgia Grigg and Kate Hollenbach for answering our p5.js shader implementation questions.
 
-Patricio Gonzalez Vivo and Jen Lowe for writing the amazing Book of shaders.
+Patricio Gonzalez Vivo and Jen Lowe for writing the amazing Book of Shaders.
 
