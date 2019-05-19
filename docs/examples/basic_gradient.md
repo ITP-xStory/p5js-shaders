@@ -2,7 +2,7 @@
 
 The following code makes a gradient depending on the position of the pixel on your canvas.
 
-Let's use some of the knowledge from above and try to experiment.
+Let's use some of the knowledge we have learned so far and try to experiment.
 
 We will use the knowledge that:
 * [position on the canvas is defined as a floating point number between 0 and 1](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts?id=the-space-between-0-and-1)
