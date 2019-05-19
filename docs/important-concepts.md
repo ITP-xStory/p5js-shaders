@@ -148,7 +148,7 @@ void main() {
   vec2 st = vTexCoord;
 ```
 
-FragCoord is used within the fragment shader to calculate the texture coordinates relative to the resolution uniform we passed it.
+FragCoord is used within the fragment shader to calculate the texture coordinates relative to the resolution uniform we passed it.<br>
 .frag
 ```glsl
 void main (void) {
