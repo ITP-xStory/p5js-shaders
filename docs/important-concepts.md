@@ -138,7 +138,7 @@ Uniforms are constant variables, but unlike consts they are constant *per frame*
 
 The important thing to know about uniforms is that they are how we can pass information from the CPU to GPU, or in other words, from p5 to our shader code.
 
-The most common uniforms to pass from p5 are time, resolution, and mouse coordinates. It is common practice to name these with a u_ prefix.
+The most common uniforms to pass from p5 are time, resolution, and mouse coordinates. It is common practice to name these with a "u_" or "u" prefix.
 
 Our p5 code to send those 3 uniforms:
 ```javascript
@@ -155,7 +155,7 @@ uniform vec2 u_mouse;
 
 ### Variable qualifiers: Using Varying
 Varying are per-fragment (per-pixel) parameters. They vary from pixel to pixel, unlike uniforms which are same for all pixels.
-Varying are typically used to pass texture coordinates that we get from WEBGL/p5 through our vertex shader to our fragment shader.
+Varying are typically used to pass texture coordinates that we get from WEBGL/p5 through our vertex shader to our fragment shader. It is common practive to prefix these with a "v" or "v_" when naming the variable.
 
 Our vert code:
 ```glsl
