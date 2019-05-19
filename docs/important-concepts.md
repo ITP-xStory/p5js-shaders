@@ -70,7 +70,10 @@ float blueComponent = color.r; 		// B = 1.0
 ```
 
 If we write color.rgb we get all three. 
-We could even write color.xyz, the shader does not know that some numbers are a color and some are a position, it just knows that you are accesing the components of a vector. This is called [**Swizzling**](https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Swizzling).
+
+We could even write color.xyz, the shader does not know that some numbers are a color and some are a position, it just knows that you are accesing the components of a vector. However it is good practive to write .rgba if your variable is a color, and .xyzw if it is a position.
+
+This "dot" way of accessing components is called [**Swizzling**](https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)#Swizzling).
 
 ```glsl
 vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
@@ -94,10 +97,13 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 
 
 ## Variable Qualifiers
-Variable qualifiers go before the variable type and name to determine how the variable will be used.
-### Using Const or #define
-Const is short for Constant, which is a variable that never changes in the life of our program.
+You can further define how a variable can be used by using variable qualifiers. Variable qualifiers go before the variable type (float, vec2 etc).
+
+### Variable qualifiers: Using Const or #define
+Const is short for "Constant", which is a variable that never changes in the life of our program. You cannot overwrite a const after you have created it.
+
 Unlike p5, constants like PI are not native to shader code. So in order to use PI in our code we have to define the constant PI in our code.
+
 There are two ways of doing this:
 ```glsl
 const float PI = 3.14159265358979323846;
@@ -108,10 +114,10 @@ or
 ```
 Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. This is theoretically faster and more efficient because it is not a variable stored in memory.
 
-### Using Attributes
-Attributes are per-vertex parameters, as a result of this they are only used in our vertex file (.vert). They are typically used to recieve vertex data from p5, which is then converted to a usable format and passed to our fragment shader.
+### Variable qualifiers: Using Attributes
+Attributes are per-vertex parameters, as a result of this they are only used in our vertex file (.vert). They are typically used to recieve vertex data from p5 shapes, which is then converted to a usable format and passed to our fragment shader.
 
-Our vert code:
+We have already used an attribute when we map the shader onto the shape. Remember our .vert code:
 ```glsl
 // our vertex data from WEBGL/p5
 attribute vec3 aPosition;
@@ -127,8 +133,8 @@ void main() {
 }
 ```
 
-### Using Uniforms
-Uniforms are constant variables, but unlike consts they are constant per frame, which means that they can be updated between draw calls. Uniforms can be accessed by all of the parallel threads in our GPU (remember the Mona Lisa painted by pipes example). They are called uniforms because the information being received by each thread is the same, as a result of this necessity of uniformity for all threads, each thread can read the input data but cannot modify it.
+### Variable qualifiers: Using Uniforms
+Uniforms are constant variables, but unlike consts they are constant *per frame*, which means that they can be updated between draw calls. Uniforms can be accessed by all of the parallel threads in our GPU ([remember the Mona Lisa painted by pipes example](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders?id=how-does-a-shader-work)). They are called uniforms because the information being received by each thread is the same, as a result of this necessity of uniformity for all threads, each thread can read the input data but cannot modify it.
 
 The important thing to know about uniforms is that they are how we can pass information from the CPU to GPU, or in other words, from p5 to our shader code.
 
@@ -147,9 +153,10 @@ uniform float u_time;
 uniform vec2 u_mouse;
 ```
 
-### Using Varying
+### Variable qualifiers: Using Varying
 Varying are per-fragment (per-pixel) parameters. They vary from pixel to pixel, unlike uniforms which are same for all pixels.
 Varying are typically used to pass texture coordinates that we get from WEBGL/p5 through our vertex shader to our fragment shader.
+
 Our vert code:
 ```glsl
 // I'm excluding our normal vertex position data operations from this example code.
@@ -176,15 +183,16 @@ void main(){
 
 
 
-
-Now that we know that every position is defined as a floating point number between 0 and 1, and we know about uniforms, let's put it to work by making a Gradient fill!
-
-
-
-
 # Shader Code: Gradient fill
 
-The following code makes a gradient depending on the position of the pixels on your canvas.
+The following code makes a gradient depending on the position of the pixel on your canvas.
+
+Let's use some of the knowledge from above and try to experiment.
+
+We will use the knowledge that:
+* position on the canvas is defined as a floating point number between 0 and 1
+* uniforms can be used to pass information from our p5 sketch.js to our shader
+
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -308,7 +316,7 @@ void main() {
 
 
   // you can only have one gl_FragColor active at a time, but try commenting the others out
-  // try the green channel
+  // try the green component
 
   //gl_FragColor = vec4(0.0,st.x,0.0,1.0); 
 
