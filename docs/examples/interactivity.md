@@ -1,5 +1,5 @@
 # Uniforms & Interactivity with Shaders
-### Uniforms are a way of passing information from p5 to our shader. Here we're passing our mouse coordinates, time, and sketch resolution.
+#### Uniforms are a way of passing information from p5 to our shader. Here we're passing our mouse coordinates, time, and sketch resolution.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -10,7 +10,7 @@
   </iframe>
 </div>
 
-### js file
+#### js file
 ```javascript
 //this variable will hold our shader object
 let shapeShader;
@@ -44,7 +44,7 @@ function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
 }
 ```
-### frag file
+#### frag file
 ```frag
 // this is a modification of a shader by adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples/tree/gh-pages/5_shapes/5-3_polygon
@@ -121,7 +121,7 @@ void main() {
   gl_FragColor = vec4(poly.rgb, 1.0);
 }
 ```
-### vert file
+#### vert file
 ```vert
 // vert file and comments from adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples
