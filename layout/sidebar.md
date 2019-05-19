@@ -15,7 +15,8 @@
    * Working with Other Resources
       * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
       * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
-   * [Experimental (Not Working 100%)](./docs/examples/experimental.md)
+   * Experimental (Not Working 100%)
+      * [Bodypix Feedback](./docs/examples/bodypix.md)
 
 * Learn more
    * [Check out these references](./docs/examples/continue-learning.md)
