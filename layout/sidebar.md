@@ -15,8 +15,9 @@
    
 * Advanced Examples
    * [Image Effects (Webcam)](./docs/examples/image_effects.md)
-   * Experimental (Not Working 100%)
-      * [Bodypix Feedback](./docs/examples/bodypix.md)
+   
+* Experimental (Not Working 100%)
+   * [Bodypix Feedback](./docs/examples/bodypix.md)
       
 * Working with other resources
    * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
