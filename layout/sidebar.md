@@ -9,7 +9,9 @@
 * Examples
    * [Basic](./docs/examples/basic.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
-   * [Applying Shaders to Shapes](./docs/examples/shaders_to_shapes.md)
+   * Applying Shaders to Shapes
+      * [Applying Shaders as Texture](./docs/examples/shaders_to_shapes.md)
+      * [Applying Shaders to Vertices](./docs/examples/shaders_to_vertices.md)
    * [Texture Coordinates](./docs/examples/texture_coordinates.md)   
    * [Image Effects (Webcam)](./docs/examples/image_effects.md)
    * Working with Other Resources
