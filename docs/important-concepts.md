@@ -1,5 +1,7 @@
 # Important shader concepts
 
+On this page you will find a collection of the most "need to know" information to get started with shaders, so you'll be ready to dive into the collection of p5 examples.
+
 ## The space between 0 and 1
 
 When writing shaders everything you need to do exists in the space between 0 and 1!
@@ -175,14 +177,14 @@ void main(){
 
 
 
-Now that we know that every position is defined as a floating point number between 0 and 1, and we know about uniforms, let's put it to work!
+Now that we know that every position is defined as a floating point number between 0 and 1, and we know about uniforms, let's put it to work by making a Gradient fill!
 
 
 
 
 # Shader Code: Gradient fill
 
-The following code makes a gradient depending on the position of the pixels on your canvas. The vertex shader file is the same as always.
+The following code makes a gradient depending on the position of the pixels on your canvas.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -192,6 +194,8 @@ The following code makes a gradient depending on the position of the pixels on y
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
+
+The vertex shader file is the same as always:
 
 ### shader.vert file
 
@@ -211,12 +215,13 @@ attribute vec3 aPosition;
 
 void main() {
 
+  // Copy the position data into a vec4, adding 1.0 as the w parameter
   vec4 positionVec4 = vec4(aPosition, 1.0);
 
-  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+  // Scale to make the output fit the canvas
+  positionVec4.xy = positionVec4.xy * 2.0 - 1.0; 
 
   // Send the vertex information on to the fragment shader
-
   gl_Position = positionVec4;
 
 }
