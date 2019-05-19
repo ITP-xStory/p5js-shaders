@@ -17,7 +17,7 @@ There are some amazing resources on the web for learning more about shaders.
   * The full wiki on openGL
 
 
-**Ressources for learning more:**
+**Ressources for finding shaders:**
 
 * [Shadertoy.com](https://www.shadertoy.com/)
   * A great place to find shaders written by a huge online community.
