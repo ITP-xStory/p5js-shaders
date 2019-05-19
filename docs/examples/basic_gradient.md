@@ -56,7 +56,7 @@ The uniform now contains the width and height of the canvas, with u_resolution.x
 uniform vec2 u_resolution;
 ```
 
-In the **main()** function we get the position of each pixel on our canvas from **gl_FragCoord.xy** (fragment coordinate). This automaticall uses the information we provided in **gl_Position** in the vertex shader file.
+In the **main()** function we get the position of each pixel on our canvas from **gl_FragCoord.xy** (fragment coordinate). This automatically uses the information we provided in **gl_Position** in the vertex shader file.
 
 By dividing the x,y position of the pixel (gl_FragCoord.xy) by the width,height of the canvas (u_resolution.xy)
 we get normalized coordinates in the range: 0.0-1.0! 
