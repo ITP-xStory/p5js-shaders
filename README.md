@@ -1,5 +1,5 @@
-Guide: [https://itp-xstory.github.io/p5js-shaders/#/](https://itp-xstory.github.io/p5js-shaders/#/)
-Glitch.com examples: [https://glitch.com/@kcconch/shader-collection](https://glitch.com/@kcconch/shader-collection)
+**Guide:** [https://itp-xstory.github.io/p5js-shaders/#/](https://itp-xstory.github.io/p5js-shaders/#/) <br>
+**Glitch examples:** [https://glitch.com/@kcconch/shader-collection](https://glitch.com/@kcconch/shader-collection)
 
 # Welcome to p5.js shaders
 
