@@ -99,6 +99,26 @@ function draw() {
   pop();
 }
 ```
+
+#### .vert file
+```vert
+// vert file and comments from adam ferriss
+// https://github.com/aferriss/p5jsShaderExamples
+
+// our vertex data
+attribute vec3 aPosition;
+
+void main() {
+
+  // copy the position data into a vec4, using 1.0 as the w component
+  vec4 positionVec4 = vec4(aPosition, 1.0);
+  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+
+  // send the vertex information on to the fragment shader
+  gl_Position = positionVec4;
+}
+```
+
 #### .frag file
 ```frag
 // casey conchinha - @kcconch ( https://github.com/kcconch )
@@ -183,23 +203,5 @@ void main (void) {
     st = rotate2D(st,dist/(mdist/5.0)*PI*2.0);
 
     gl_FragColor = vec4(vec3(concentricCircles(st, vec2(0.0,0.0), 5.0, 5.0),concentricCircles(st, vec2(0.0,0.0), 10.0, 10.0),concentricCircles(st, vec2(0.0,0.0), 20.0, 10.0)),1.0);
-}
-```
-#### .vert file
-```vert
-// vert file and comments from adam ferriss
-// https://github.com/aferriss/p5jsShaderExamples
-
-// our vertex data
-attribute vec3 aPosition;
-
-void main() {
-
-  // copy the position data into a vec4, using 1.0 as the w component
-  vec4 positionVec4 = vec4(aPosition, 1.0);
-  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
-
-  // send the vertex information on to the fragment shader
-  gl_Position = positionVec4;
 }
 ```
