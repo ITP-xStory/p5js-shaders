@@ -5,7 +5,7 @@ On this page you will find a collection of the most "need to know" information t
 ## The space between 0 and 1
 
 When writing shaders everything you need to do exists in the space between 0 and 1!
-This might sound confusing, but it is actually really smart, because it makes our calculations incredible fast and easy to deal with. As we will see in a moment when we create a gradient (already we are moving beyond what [**fill()**](https://p5js.org/reference/#/p5/fill) can do!).
+This might sound confusing, but it is actually really smart, because it makes our calculations incredible fast and easy to deal with. As we will see on the bottom on this page when we create a gradient shader (already we are moving beyond what [**fill()**](https://p5js.org/reference/#/p5/fill) can do!).
 
 * **Colors** are defined as RGB but the color values goes from 0 - 1 instead of 0 - 255. 
   * So the color Blue would be (0.0, 0.0, 1.0) instead of (0, 0, 255).
@@ -15,9 +15,9 @@ This might sound confusing, but it is actually really smart, because it makes ou
   * So position x = 0, y = 0 or (0, 0) for a sketch, is position (0.0, 0.0) for the shader.
   * Position x = width, y = height or (width, height) for a sketch, is position (1.0, 1.0) for the shader.
 
-*This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner! This is contrary to the p5 canvas, which has (0,0) in the upper left corner, and (width,height) in the bottom right corner. So do not get confused. *
+*This means, that as far as your shader is concerned, your canvas has a size of 1, going from (0.0, 0.0) in the lower left corner to (1.0, 1.0) in the upper right corner! This is contrary to the p5 canvas, which has (0,0) in the upper left corner, and (width,height) in the bottom right corner. So do not get confused.*
 
-In this example, as you move your mouse you can see the pixel location (white box) and the normalized location (blackbox) of your cursor:
+In this example, as you move your mouse you can see the pixel location (white box) and the normalized (0 to 1) location (blackbox) of your cursor:
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -95,7 +95,7 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 
 You can make functions in the .vert or .frag file easily. You need to define what type (for instance vec3) you expect to get back from the function. 
 
-Our .frag code:
+Here is an example of a function you can place in the .frag file.
 
 ```frag
 // a function that transforms the rgb values we pass in to the space between 0 and 1
