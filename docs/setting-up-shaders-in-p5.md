@@ -111,15 +111,19 @@ ___________________________________________
 Unfortunately at the moment shader files are not supported in the p5 editor,
 so the easiest way to get started using shaders in p5 is to use Glitch.com.
 
-Which is not a bad thing because Glitch is a great servic that can host your code with custom urls and you'll be able to view and remix all of our examples there.
+Which is great because Glitch is a great service that can host your code with custom URLs and you'll be able to view and remix all of our examples there.
 
 To get started, visit our [glitch template page](https://glitch.com/edit/#!/shader-template) and click "Remix to Edit" in the top right corner.
 
 ![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/shader_template_remix.png?raw=true)
 
-You'll immediately be able to start making your own p5.js / shader sketch. You'll need to make an account if you want to save your sketch, just click sign in at the top right and make an account. Logging into Github or other accounts is also an option.
+You'll immediately be able to start making your own p5.js / shader sketch. You'll need to make an account if you want to save your sketch, just click sign in at the top right and make an account. Logging through Github or other accounts is also an option.
 
 ![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/shader_template_login.png?raw=true)
+
+After signing up and logging in, you can click "remix" on any example in this guide, and they will get saved to your Glitch account! If you are not logged in, you can still click "remix" and change the code, but the code won't be saved once you leave the page.
+
+We encourage you to feel free to experiment with the examples as you go through the guide!
 
 
 
