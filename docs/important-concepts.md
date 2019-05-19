@@ -95,6 +95,26 @@ vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
 
 ```
 
+## Making functions in shaders
+
+You can make functions in the .vert or .frag file easily. You need to define what type (for instance vec3) you expect to get back from the function. 
+
+Our .frag code:
+
+```glsl
+// a function that transforms the rgb values we pass in to the space between 0 and 1
+vec3 rgb(float r, float g, float b){
+  return vec3(r / 255.0, g / 255.0, b / 255.0);
+}
+
+void main() {
+  // red color
+  vec3 color = rgb(255.0, 0.0, 0.0)
+  gl_FragColor = vec4(color, 1.0);
+}
+
+```
+
 
 ## Variable Qualifiers
 You can further define how a variable can be used by using variable qualifiers. Variable qualifiers go before the variable type (float, vec2 etc).
