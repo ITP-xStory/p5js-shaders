@@ -5,7 +5,7 @@ We use the p5 [**texture()**](https://p5js.org/reference/#/p5/texture). This wor
 
 Try remixing and replacing the shader files with your own shader files.
 
-Sidenote: When you put a texture or shader on an ellipse it needs to be rendered in 3D, so a fifth parameter that controls the number of vertices in it becomes necessary, or else you'll have sharp corners. setting it to 100 is smooth. MouseX is controlling this number.
+Sidenote: When you put a texture or shader on an ellipse it needs to be rendered in 3D, so a fifth parameter that controls the number of vertices in it becomes necessary, or else you'll have sharp corners. setting it to 100 is smooth. mouseX is being mapped to control this number.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
