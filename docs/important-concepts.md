@@ -203,9 +203,10 @@ We will use the knowledge that:
   </iframe>
 </div>
 
-The vertex shader file is the same as always:
+
 
 ### shader.vert file
+The vertex shader file is the same as [always](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shadervert-file).
 
 ```glsl
 
@@ -237,6 +238,11 @@ void main() {
 ```
 
 
+
+
+
+
+### shader.frag file
 We pass in the size of the canvas as a uniform called **vec2 u_resolution**.
 This is set up in the sketch.js file: theShader.setUniform("u_resolution", [width, height]);
 
@@ -288,7 +294,7 @@ gl_FragColor = vec4(st.x,st.y,0.0,1.0);
 
 
 
-### shader.frag file
+This complete shader.frag file looks like this:
 
 ```glsl
 
