@@ -115,8 +115,8 @@ void main() {
 
 ```
 
-## TexCoord and FragCoord
-You may have noticed these variables in your shader code but not understood exactly what they meant. Think about your shader as a stretchy cloth and these coord variables as a series of pins that hold the corners tight. Depending on the location and spacing of these pins your shader can be stretched, distorted, or duplicated in different ways.
+## Texture Coordinates
+TexCoord and FragCoord—you may have noticed these variables in your shader code but not understood exactly what they meant. Think about your shader as a stretchy cloth and these coord variables as a series of pins that hold the corners tight. Depending on the location and spacing of these pins your shader can be stretched, distorted, or duplicated in different ways.
 
 TexCoord is calculated in the vertex and passed from the vertex to the fragment shader, and then the texture coordinates of our shader are set to be equal to TexCoord.
 
