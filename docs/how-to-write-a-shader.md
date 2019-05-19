@@ -1,16 +1,18 @@
 # How to write a shader
 
-### The anatomy of a shader
-
 Now let's talk about the shader files we're loading.
 
-To make a shader you must make two files in your p5 sketch folder: A **"shader.vert"** file and a **"shader.frag"** file. You can name the shader files whatever you want. "myAwesomeShader.vert" and "myAwesomeShader.frag" are completely valid names. As long as you have both the .vert and the .frag file, you are good to go. 
+To make a shader, you must make two files in your p5 sketch folder: A **"shader.vert"** file and a **"shader.frag"** file. You can name the shader files whatever you want. "myAwesomeShader.vert" and "myAwesomeShader.frag" are completely valid names. As long as you have both the .vert and the .frag file, you are good to go.
+
+We will start by making own version of a one color fill, just like [**fill()**](https://p5js.org/reference/#/p5/fill) in p5. So why not name the files "onecolor.vert" and "onecolor.frag"? You can click around the files right here, and then we'll go through what they contain below.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
 <iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=onecolor.frag&previewSize=0&sidebarCollapsed=false" alt="one-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
 </div>
 
-It's important to note that these files are written in GLSL (OpenGL Shading Language), which is a lower level language than Javascript, meaning it speaks more directly to your computer, specifically to your GPU. The code will seem foreign and confusing at first, but with time we can develop more of an understanding of what is going on.
+It is important to note that these files are written in GLSL (OpenGL Shading Language), which is a lower level language than Javascript, meaning it speaks more directly to your computer, specifically to your GPU. The code will seem foreign and confusing at first, but after this intro, you should have better understanding of what is going on.
+
+### The anatomy of a shader
 
 The [**.vert file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shadervert-file) handles everything that has to do with vertexes - that is all of your geometry (shapes) and its position on the canvas. A *vertex* is another name for the corner points of your shape, so if you have a [**rect()**](https://p5js.org/reference/#/p5/rect), there are four vertexes. More complex shapes like 3D models have more vertexes, and when all of these are connected this is known as a "mesh". A [**Sphere()**](https://p5js.org/reference/#/p5/sphere) is a good example of a mesh in p5. The .vert file handles "per-vertex" operations, so it is good shader practice to place code that has to do with a pixel's position on the mesh here. For our first examples we will just be using a rectangle that covers the entire canvas, so the .vert file is very simple. The file ends with setting the built in variable called **gl_Position** equal to our calculations, this ensures that we automatically can use these positions in the .frag file.
 
@@ -22,7 +24,7 @@ The .vert file is run first, and automatically passes the calculations we do wit
 
 *The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
 
-If you are interested in diving deeper, this [wikibook page on OpenGL](https://en.wikibooks.org/wiki/GLSL_Programming/OpenGL_ES_2.0_Pipeline) is a great ressource.
+If you are interested in diving deeper in what happens when these files are run, this [wikibook page on OpenGL](https://en.wikibooks.org/wiki/GLSL_Programming/OpenGL_ES_2.0_Pipeline) is a great ressource.
 
 
 
