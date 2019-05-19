@@ -115,6 +115,13 @@ void main() {
 
 ```
 
+## TexCoord and FragCoord
+You may have noticed these variables in your shader code but not understood exactly what they meant. Think about your shader as a stretchy cloth and these coord variables as a series of pins that hold the corners tight. Depending on the location and spacing of these pins your shader can be stretched, distorted, or duplicated in different ways.
+
+TexCoord is passed from the vertex to the fragment shader.
+FragCoord is used within the fragment shader to calculate the uv coordinates relative to the resolution uniform we passed it.
+
+***
 
 ## Variable Qualifiers
 You can further define how a variable can be used by using variable qualifiers. Variable qualifiers go before the variable type (float, vec2 etc).
