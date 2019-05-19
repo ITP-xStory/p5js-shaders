@@ -54,7 +54,6 @@ vec2 position = vec2(0.5, 0.5);   	// the center of the canvas (width/2, height/
 vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
 
 vec4 colorWithAlpha = vec4(0.0, 0.0, 1.0, 0.5); 	// blue color that is half transparent A = 0.5
-
 ```
 
 What is neat about constructing our variables like this, is that we can access their components very easily.
@@ -66,7 +65,6 @@ vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
 float redComponent = color.r; 		// R = 0
 float greenComponent = color.g; 	// G = 0.5
 float blueComponent = color.r; 		// B = 1.0
-
 ```
 
 If we write color.rgb we get all three. 
@@ -80,7 +78,6 @@ vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
 
 vec3 colorCopy1 = color.rgb; 		// R = 0, G = 0.5, B = 1.0
 vec3 colorCopy2 = color.xyz; 		// R = 0, G = 0.5, B = 1.0
-
 ```
 
 
@@ -92,7 +89,6 @@ vec3 color = vec3(0.0, 0.5, 1.0); 	// R = 0, G = 0.5, B = 1.0
 color.r = 0.833; 			// setting the R component to a new value
 
 vec3 newColor = color;			// R = 0.833, G = 0.5, B = 1.0
-
 ```
 
 ## Making functions in shaders
@@ -112,7 +108,6 @@ void main() {
   vec3 color = rgb(255.0, 0.0, 0.0)
   gl_FragColor = vec4(color, 1.0);
 }
-
 ```
 
 ## Texture Coordinates
@@ -136,7 +131,6 @@ void main() {
   vTexCoord = aTexCoord;
   
 }
-
 ```
 The .frag file, but only the code related to TexCoord:
 ```frag
@@ -146,16 +140,14 @@ The .frag file, but only the code related to TexCoord:
   // vTexCoord is a value that goes from 0.0 - 1.0 depending on the pixels location
   // we can use it to access every pixel on the screen
   vec2 st = vTexCoord;
-  
 ```
 
-FragCoord is used within the fragment shader to calculate the texture coordinates relative to the resolution uniform we passed it.<br>
+FragCoord is used within the fragment shader to calculate the texture coordinates relative to the resolution uniform we passed it.<br><br>
 The .frag file, but only the code related to FragCoord:
 ```frag
 void main (void) {
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
  }
- 
 ```
 
 You may see coordinates referred as uv, st, coord, etc. these are just different naming conventions for the same thing.
@@ -173,12 +165,10 @@ Unlike p5, constants like PI are not native to shader code. So in order to use P
 There are two ways of doing this:
 ```frag
 const float PI = 3.14159265358979323846;
-
 ```
 or
 ```frag
 #define PI 3.14159265358979323846
-
 ```
 Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. In coding this # syntax is known as a "preprocessor directive". This is theoretically faster and more efficient because it is not a variable stored in memory. 
 
@@ -249,8 +239,6 @@ void main(){
 }
 ```
 
-
-
 # Shader Code: Gradient fill
 
 The following code makes a gradient depending on the position of the pixel on your canvas.
@@ -270,7 +258,6 @@ We will use the knowledge that:
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
-
 
 
 ### shader.vert file
@@ -343,7 +330,6 @@ gl_FragColor = vec4(0.0,st.x,0.0,1.0);
 
 // R = dependent on pixel location in x-axis, G = dependent on pixel location in y-axis, B = 0, A = 1
 gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
-
 ```
 
 The complete shader.frag file looks like this:
@@ -375,5 +361,4 @@ void main() {
   
   //gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
 }
-
 ```
