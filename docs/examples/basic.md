@@ -12,7 +12,7 @@
 
 ***
 
-#### js file
+#### .js file
 ```javascript
 // a shader variable
 let theShader;
@@ -40,7 +40,7 @@ function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
 }
 ```
-#### frag file
+#### .frag file
 ```frag
 precision mediump float;
 
@@ -59,7 +59,7 @@ void main() {
   gl_FragColor = vec4(coord.x, coord.y, (coord.x+coord.y), 1.0 );
 }
 ```
-#### vert file
+#### .vert file
 ```vert
 // vert file and comments from adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples
