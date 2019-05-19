@@ -23,6 +23,5 @@
    * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
    * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
 
-
 * Learn more
    * [Check out these references](./docs/continue-learning.md)
