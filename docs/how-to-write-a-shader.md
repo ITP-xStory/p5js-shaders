@@ -7,7 +7,7 @@ Now let's talk about the shader files we're loading.
 To make a shader you must make two files in your p5 sketch folder: A **"shader.vert"** file and a **"shader.frag"** file. You can name the shader files whatever you want. "myAwesomeShader.vert" and "myAwesomeShader.frag" are completely valid names. As long as you have both the .vert and the .frag file, you are good to go. 
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-<iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=uniform.frag&previewSize=0&sidebarCollapsed=false" alt="gradient-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
+<iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=onecolor.frag&previewSize=0&sidebarCollapsed=false" alt="one-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
 </div>
 
 It's important to note that these files are written in GLSL (OpenGL Shading Language), which is a lower level language than Javascript, meaning it speaks more directly to your computer, specifically to your GPU. The code will seem foreign and confusing at first, but with time we can develop more of an understanding of what is going on.
@@ -153,7 +153,7 @@ ___________________________________________
 # Shader code: One color fill
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=uniform.frag&previewSize=100" alt="gradient-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
+  <iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=onecolor.frag&previewSize=100" alt="one-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
 </div>
 
 
