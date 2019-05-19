@@ -4,8 +4,8 @@
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/shader-with-webcam?path=webcam.frag&previewSize=100"
-    alt="shader-with-webcam on Glitch"
+    src="https://glitch.com/embed/#!/embed/bodypix-one?path=uniform.frag&previewSize=100"
+    alt="bodypix-one on Glitch"
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
