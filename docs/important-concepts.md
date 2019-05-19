@@ -275,9 +275,7 @@ The vertex shader file is the same as [always](https://itp-xstory.github.io/p5js
 ```vert
 
 #ifdef GL_ES
-
 precision mediump float;
-
 #endif
 
 
@@ -296,7 +294,6 @@ void main() {
 
   // Send the vertex information on to the fragment shader
   gl_Position = positionVec4;
-
 }
 
 ```
@@ -338,8 +335,6 @@ We can now make a gradient from black to red in the x-axis, if we use the **st.x
 ```glsl
 // R = dependent on pixel location in x-axis, from 0 to 1, G = 0, B = 0, A = 1
 gl_FragColor = vec4(st.x,0.0,0.0,1.0); 
-
-
 ```
 
 You could also make the green color dependent on the pixel location in the x-axis.
@@ -363,15 +358,10 @@ The complete shader.frag file looks like this:
 ```frag
 
 #ifdef GL_ES
-
 precision mediump float;
-
 #endif
 
-
-
 uniform vec2 u_resolution; // This is passed in as a uniform from the sketch.js file
-
 
 void main() {
 
@@ -394,7 +384,5 @@ void main() {
   // try both the x position and the y position
   
   //gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
-
 }
-
 ```
