@@ -10,7 +10,7 @@ There are some amazing resources on the web for learning more about shaders.
 * [Shaderific](http://www.shaderific.com/glsl)
   * A short, easy-to-read online reference for GLSL, built for the app "shaderific". 
 
-* https://webglfundamentals.org/
+* [WebGL Fundamentals](https://webglfundamentals.org/)
   * A long, easy-to-read online reference for WebGL.
 
 * [OpenGL reference](https://www.khronos.org/opengl/wiki/Main_Page)
