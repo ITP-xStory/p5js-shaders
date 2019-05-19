@@ -1,5 +1,5 @@
 # Applying Shaders as Textures
-### This is an example showing how to apply your shaders to 2D/3D shapes in p5.
+#### This is an example showing how to apply your shaders to 2D/3D shapes in p5.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -10,7 +10,9 @@
   </iframe>
 </div>
 
-### js file
+***
+
+#### js file
 ```javascript
 let theShader;
 let shaderTexture;
@@ -73,7 +75,7 @@ function draw() {
   ellipse(260,0,200,200);
 }
 ```
-### frag file
+#### frag file
 ```frag
 precision mediump float;
 #endif
@@ -153,7 +155,7 @@ void main (void) {
     gl_FragColor = vec4(vec3(concentricCircles(st, vec2(0.0,0.0), 5.0, 5.0),concentricCircles(st, vec2(0.0,0.0), 10.0, 10.0),concentricCircles(st, vec2(0.0,0.0), 20.0, 10.0)),1.0);
 }
 ```
-### vert file
+#### vert file
 ```vert
 // vert file and comments from adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples
