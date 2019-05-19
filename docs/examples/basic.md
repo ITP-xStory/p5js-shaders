@@ -1,5 +1,6 @@
 # Basic Gradient Shader
 #### This is a basic example showing a gradient shader loaded in p5.
+This gradient is a little different from that one [shown here](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts?id=shader-code-gradient-fill) in that it isn't passed a resolution uniform to then calculate the texture coordinates. Instead the texture coordinates are sent from the vertex shader, which received them from the CPU. Minor difference but worth noting.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
