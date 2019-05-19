@@ -9,7 +9,8 @@
     * [Using Texture Coordinates](./docs/using-texture-coordinates.md)
 
 * Basic Examples
-   * [Basic gradient shader](./docs/examples/basic.md)
+   * [Basic gradient shader](./docs/examples/basic-gradient.md)
+   * [Gradient shader with texcoord](./docs/examples/basic-gradient-texcoord.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
    * [Applying Shaders as Texture](./docs/examples/shaders_to_shapes.md)
    * [Applying Shaders to Vertices](./docs/examples/shaders_to_vertices.md)
