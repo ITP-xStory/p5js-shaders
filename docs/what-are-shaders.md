@@ -21,7 +21,7 @@ This is fine for basic programs, but you might have noticed, that the more compl
 
 In contrast your GPU (Graphics Processing Unit) is capable of something called parallel processing by using shaders. This means that everything you draw in your sketch by using a shader is drawn all at once, all 4.000.096 operations! Therefor shaders are an incredible optimized way of making more complex drawings, without slowing your sketch down.
 
-To understand what a shader does, imagine the CPU as a single pipe, where all of the pixels on your canvas must pass through, one at a time, to be told what color they should have. Now imagine instead, that each pixel has its own pipe, and we could just tell every pixels on your canvas what color it should have in parallel (at the same time). That is what a shader does. 
+To understand what a shader does, imagine the CPU as a single pipe, where all of the pixels on your canvas must pass through, one at a time, to be told what color they should have. The GPU still handles the actual coloring, but the CPU handles all of the calculations. Now imagine instead, that each pixel has its own pipe, and we could just calculate and tell every pixels on your canvas what color it should have in parallel (at the same time). That is what a shader does. 
 
 It is kind of like painting the entire Mona Lisa in one go with a multicolored blast canon.
 We'll let MythBusters demonstrate:
