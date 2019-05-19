@@ -136,6 +136,7 @@ void main() {
   vTexCoord = aTexCoord;
   
 }
+
 ```
 The .frag file, but only the code related to TexCoord:
 ```frag
@@ -145,6 +146,7 @@ The .frag file, but only the code related to TexCoord:
   // vTexCoord is a value that goes from 0.0 - 1.0 depending on the pixels location
   // we can use it to access every pixel on the screen
   vec2 st = vTexCoord;
+  
 ```
 
 FragCoord is used within the fragment shader to calculate the texture coordinates relative to the resolution uniform we passed it.<br>
@@ -153,6 +155,7 @@ The .frag file, but only the code related to FragCoord:
 void main (void) {
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
  }
+ 
 ```
 
 You may see coordinates referred as uv, st, coord, etc. these are just different naming conventions for the same thing.
@@ -170,10 +173,12 @@ Unlike p5, constants like PI are not native to shader code. So in order to use P
 There are two ways of doing this:
 ```frag
 const float PI = 3.14159265358979323846;
+
 ```
 or
 ```frag
 #define PI 3.14159265358979323846
+
 ```
 Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. In coding this # syntax is known as a "preprocessor directive". This is theoretically faster and more efficient because it is not a variable stored in memory. 
 
@@ -338,6 +343,7 @@ gl_FragColor = vec4(0.0,st.x,0.0,1.0);
 
 // R = dependent on pixel location in x-axis, G = dependent on pixel location in y-axis, B = 0, A = 1
 gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
+
 ```
 
 The complete shader.frag file looks like this:
@@ -369,4 +375,5 @@ void main() {
   
   //gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
 }
+
 ```
