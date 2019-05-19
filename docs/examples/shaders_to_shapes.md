@@ -1,7 +1,7 @@
 # Applying Shaders as Textures
 #### This is an example showing how to apply your shaders to 2D/3D shapes in p5.
 
-We use the p5 [**texture**](https://p5js.org/reference/#/p5/texture). This works like fill() and will put the shader on any shape you draw after the texture(shaderTexture) call.
+We use the p5 [**texture()**](https://p5js.org/reference/#/p5/texture). This works like fill() and will put the shader on any shape you draw after the **texture(shaderTexture)** call.
 
 Try remixing and replacing the shader files with your own shader files.
 
