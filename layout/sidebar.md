@@ -7,7 +7,7 @@
     * [Important shader concepts](./docs/important-concepts.md) 
     
 * Basic Examples
-   * [Basic](./docs/examples/basic.md)
+   * [Basic gradient colors](./docs/examples/basic.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
    * [Applying Shaders as Texture](./docs/examples/shaders_to_shapes.md)
    * [Applying Shaders to Vertices](./docs/examples/shaders_to_vertices.md)
@@ -18,7 +18,7 @@
    * Experimental (Not Working 100%)
       * [Bodypix Feedback](./docs/examples/bodypix.md)
       
-* Working with other Resources
+* Working with other resources
    * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
    * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
 
