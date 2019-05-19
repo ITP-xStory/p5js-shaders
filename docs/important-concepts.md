@@ -156,7 +156,7 @@ void main (void) {
  }
 ```
 
-You may see coordinates referred as uv, st, coord, etc. these just different naming conventions for the same thing.
+You may see coordinates referred as uv, st, coord, etc. these are just different naming conventions for the same thing.
 
 ***
 
