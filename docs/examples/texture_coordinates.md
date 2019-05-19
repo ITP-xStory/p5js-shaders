@@ -42,6 +42,26 @@ function draw() {
   rect(0,0,width,height);
 }
 ```
+
+#### .vert file
+```vert
+// vert file and comments from adam ferriss
+// https://github.com/aferriss/p5jsShaderExamples
+
+// our vertex data
+attribute vec3 aPosition;
+
+void main() {
+
+  // copy the position data into a vec4, using 1.0 as the w component
+  vec4 positionVec4 = vec4(aPosition, 1.0);
+  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+
+  // send the vertex information on to the fragment shader
+  gl_Position = positionVec4;
+}
+```
+
 #### .frag file
 ```frag
 // rotate/tile functions from example by patricio gonzalez vivo
@@ -129,23 +149,5 @@ void main (void) {
     // step(st.x,st.y) just makes a b&w triangles
     // but you can use whatever design you want.
     gl_FragColor = vec4(vec3(concentricCircles(st, vec2(0.0,0.0), 5.0, 10.0)),1.0);
-}
-```
-#### .vert file
-```vert
-// vert file and comments from adam ferriss
-// https://github.com/aferriss/p5jsShaderExamples
-
-// our vertex data
-attribute vec3 aPosition;
-
-void main() {
-
-  // copy the position data into a vec4, using 1.0 as the w component
-  vec4 positionVec4 = vec4(aPosition, 1.0);
-  positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
-
-  // send the vertex information on to the fragment shader
-  gl_Position = positionVec4;
 }
 ```
