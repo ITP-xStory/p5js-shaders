@@ -32,7 +32,7 @@ If you are interested in diving deeper in what happens when these files are run,
 
 First we write some necessary definitions that let your GPU know how to render the shader. You should not worry too much about this when just starting out with shaders. But it is nice to know, so we will explain it briefly.
 
-[GL_ES](https://www.khronos.org/opengles/) is a shader API which is automatically used by your GPU, if you are displaying the shader in a browser or on a mobile platform. #ifdef means "if defined". It simply makes a global setting for how precise we want our graphics rendered depending on where we are viewing them. So if we are in a browser, they will get the level of precision we define here. In this case we are setting all floating point numbers in our code to have "medium" precision. This is really important for making smooth color gradients,
+[GL_ES](https://www.khronos.org/opengles/) is a shader API which is automatically used by your GPU, if you are displaying the shader in a browser or on a mobile platform. #ifdef means "if defined". It simply makes a global setting for how precise we want our graphics rendered depending on where we are viewing them. So if we are in a browser, they will get the level of precision we define here. In this case we are setting all floating point numbers in our code to have "medium" precision. This is really important for making smooth color gradients.
 
 **"Float types are vital in shaders, so the level of precision is crucial. Lower precision means faster rendering, but at the cost of quality. You can be picky and specify the precision of each variable that uses floating point. In the first line (precision mediump float;) we are setting all floats to medium precision. But we can choose to set them to low (precision lowp float;) or high (precision highp float;)."** - [The Book of Shaders](https://thebookofshaders.com/02/)
 
@@ -61,7 +61,7 @@ attribute vec3 aPosition;
 
 
 
-All shaders must have a void main() function. This is where the program starts. Remember that everything in here is run for each pixel on the canvas! So you need to adjust your thinking, and think about coding for just one pixel at a time!
+All shaders must have a void main() function. This is where the program starts. Remember that everything in here is run for each pixel on the canvas! So you need to adjust your thinking, and think about coding for just one pixel!
 
 For shaders in p5, there is something weird that needs to happen in the main() function.
 We need to scale the attribute aPosition before it can be passed to the .frag file. This might be a bug that is resolved in a later version. But for now we can get around it by simply scaling all pixels positions.
