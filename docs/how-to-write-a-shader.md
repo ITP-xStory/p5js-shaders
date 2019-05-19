@@ -1,5 +1,6 @@
 # How to write a shader
-**aka the anatomy of a shader**
+
+### The anatomy of a shader
 
 Now let's talk about the shader files we're loading.
 
@@ -12,7 +13,7 @@ The [**.vert file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-w
 The [**.frag file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shaderfrag-file) handles everything that has to do with the actual coloring of the pixels, and ends with setting the built in variable called **gl_FragColor** equal to a color. The .frag file handels "per-fragment" (per-pixel) operations. It is good practice to use this shader just for coloring of the pixels.
 
 
-**The shader program runs like this:**
+### The shader program runs like this
 The .vert file is run first, and automatically passes the calculations we do with the geometry (shapes) on our canvas on to the .frag file. The fragment file then colors the pixels according to their positions!
 
 *The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
@@ -149,7 +150,9 @@ ___________________________________________
 
 
 
-[https://glitch.com/~one-color](https://glitch.com/~one-color) 
+//[https://glitch.com/~one-color](https://glitch.com/~one-color) 
+
+<iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=uniform.frag&previewSize=100" alt="gradient-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
 
 
 ### shader.vert
