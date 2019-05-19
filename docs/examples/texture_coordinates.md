@@ -1,5 +1,5 @@
 # Texture Coordinates
-#### This is an example showing how texture coordinates can be manipulated to create duplicate variations of one image.
+#### This is an example showing how texture coordinates can be manipulated to create duplicate variations of one image. [More on texture coordinates.](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts?id=texture-coordinates)
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
