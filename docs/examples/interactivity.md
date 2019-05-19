@@ -1,9 +1,11 @@
 # Uniforms & Interactivity with Shaders
 #### Uniforms are a way of passing information from p5 to our shader. Here we're passing our mouse coordinates, time, and sketch resolution.
 
+In this example will make a shape completely defined in the shader.
+
 **uniform vec2 resolution;** is used for sizing the shader to fit the whole canvas.
 
-**uniform float time;** is used for rotation of the shape.
+**uniform float time;** is used for rotation of the shape in the shader.
 
 **uniform float mouse;** mouseX is used for defining the amount of corners on the shape.
 
