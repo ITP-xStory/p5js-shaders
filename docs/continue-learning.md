@@ -1,4 +1,4 @@
-## Learn more about shaders by checking out these online ressources
+# Check out these ressources
 
 There are some amazing resources on the web for learning more about shaders. 
 
