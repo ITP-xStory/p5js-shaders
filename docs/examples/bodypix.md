@@ -1,5 +1,7 @@
 # Bodypix Feedback Loop
 #### This example use bodypix to remove the background from the webcam video, and passes it to the shader as a texture, which creates a feedback loop from the video frames.
+Potential Epilepsy Warning
+This example currently crashes after 30 seconds. Will update when fixed.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
