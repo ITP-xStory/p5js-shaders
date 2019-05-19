@@ -5,7 +5,8 @@
     * [Setting up shaders in p5.js](./docs/setting-up-shaders-in-p5.md)
     * [How to write a shader](./docs/how-to-write-a-shader.md)
     * [Important shader concepts](./docs/important-concepts.md) 
-    
+
+Examples
 * Basic Examples
    * [Basic gradient colors](./docs/examples/basic.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
@@ -23,5 +24,6 @@
    * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
    * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
 
+Learn more
 * Learn more
    * [Check out these references](./docs/continue-learning.md)
