@@ -4,7 +4,8 @@
     * [What are shaders?](./docs/what-are-shaders.md)
     * [Setting up shaders in p5.js](./docs/setting-up-shaders-in-p5.md)
     * [How to write a shader](./docs/how-to-write-a-shader.md)
-    * [Important shader concepts](./docs/important-concepts.md) 
+    * [Important shader concepts](./docs/important-concepts.md)
+    * [Using Texture Coordinates](./docs/using-texture-coordinates.md)
 
 * Basic Examples
    * [Basic gradient shader](./docs/examples/basic.md)
