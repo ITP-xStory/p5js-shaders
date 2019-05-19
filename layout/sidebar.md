@@ -5,6 +5,7 @@
     * [Setting up shaders in p5.js](./docs/setting-up-shaders-in-p5.md)
     * [How to write a shader](./docs/how-to-write-a-shader.md)
     * [Important shader concepts](./docs/important-concepts.md)
+    * [Using Variable Qualifiers](./docs/using-variable-qualifiers.md)
     * [Using Texture Coordinates](./docs/using-texture-coordinates.md)
 
 * Basic Examples
