@@ -6,7 +6,6 @@
     * [How to write a shader](./docs/how-to-write-a-shader.md)
     * [Important shader concepts](./docs/important-concepts.md) 
 
-Examples
 * Basic Examples
    * [Basic gradient colors](./docs/examples/basic.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
@@ -17,13 +16,12 @@ Examples
 * Advanced Examples
    * [Image Effects (Webcam)](./docs/examples/image_effects.md)
    
-* Experimental (Not Working 100%)
+* Experimental Examples
    * [Bodypix Feedback](./docs/examples/bodypix.md)
       
 * Working with other resources
    * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
    * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
 
-Learn more
 * Learn more
    * [Check out these references](./docs/continue-learning.md)
