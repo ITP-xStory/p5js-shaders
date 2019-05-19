@@ -1,3 +1,5 @@
+# Check out these resources
+
 There are some amazing resources on the web for learning more about shaders. 
 
 ### **Resources for learning more:**
