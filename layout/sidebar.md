@@ -10,7 +10,7 @@
    * [Basic](./docs/examples/basic.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
    * [Applying Shaders to Shapes](./docs/examples/shaders_to_shapes.md)
-   * [Manipulating Coordinates](./docs/examples/fragment_coordinates.md)   
+   * [Texture Coordinates](./docs/examples/texture_coordinates.md)   
    * [Image Effects (Webcam)](./docs/examples/image_effects.md)
    * Working with Other Resources
       * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
