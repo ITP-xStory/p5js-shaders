@@ -1,5 +1,5 @@
-# Texture Coordinates
-#### This is an example showing how texture coordinates can be manipulated to create duplicate variations of one image.
+# Fragment Coordinates
+#### This is an example showing how fragments coordinates can be manipulated to create duplicate variations of one image.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
