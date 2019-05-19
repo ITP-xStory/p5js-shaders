@@ -18,6 +18,34 @@ We will use the knowledge that:
   </iframe>
 </div>
 
+#### .js file
+```javascript
+// a shader variable
+let theShader;
+
+function preload(){
+  // load the shader
+  theShader = loadShader('basic.vert', 'basic.frag');
+}
+
+function setup() {
+  // shaders require WEBGL mode to work
+  createCanvas(windowWidth, windowHeight, WEBGL);
+  noStroke();
+}
+
+function draw() {  
+  // shader() sets the active shader with our shader
+  shader(theShader);
+
+  // rect gives us some geometry on the screen
+  rect(0,0,width, height);
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+```
 
 ### shader.vert file
 The vertex shader file is the same as [always](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-write-a-shader?id=content-of-a-shadervert-file).
