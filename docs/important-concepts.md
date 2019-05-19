@@ -338,7 +338,7 @@ gl_FragColor = vec4(st.x,0.0,0.0,1.0);
 ```
 
 You could also make the green color dependent on the pixel location in the x-axis.
-Or use both the st.x and st.y to decide the color of the pixel.
+Or use both the st.x and st.y to decide the color of the pixel. *NOTE: You can only have one gl_FragColor active at a time, so make sure you are only setting it once.*
 
 
 ```glsl
@@ -349,14 +349,13 @@ gl_FragColor = vec4(0.0,st.x,0.0,1.0);
 gl_FragColor = vec4(st.x,st.y,0.0,1.0); 
 ```
 
-*NOTE: You can only have one gl_FragColor active at a time, so make sure you are only setting it once.*
+
 
 
 
 The complete shader.frag file looks like this:
 
 ```frag
-
 #ifdef GL_ES
 precision mediump float;
 #endif
