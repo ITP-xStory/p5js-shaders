@@ -38,7 +38,7 @@ vec2 uv = gl_FragCoord.xy/iResolution.xy;
 gl_FragColor = vec4(col,1.0);
 ```
 
-The last thing is the difference in how void main called in shadertoy vs straight GLSL.
+The last thing is the difference in how void main is called in shadertoy vs straight GLSL.
 In the shadertoy:
 ```glsl
 void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
