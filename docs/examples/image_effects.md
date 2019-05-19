@@ -1,5 +1,5 @@
 # Applying Images Effects to the Webcam
-### This example passes the webcam to the shader as a texture and manipulates the image with shader math.
+#### This example passes the webcam to the shader as a texture and manipulates the image with shader math.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -10,7 +10,9 @@
   </iframe>
 </div>
 
-### js file
+***
+
+#### .js file
 ```javascript
 // a shader variable
 let theShader;
@@ -44,7 +46,7 @@ function draw() {
   
 }
 ```
-### frag file
+#### .frag file
 ```frag
 #ifdef GL_ES
 precision mediump float;
@@ -79,7 +81,7 @@ void main() {
   gl_FragColor = vec4(thresh, 1.0);
 }
 ```
-### vert file
+#### .vert file
 ```vert
 // vert file and comments from adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples
