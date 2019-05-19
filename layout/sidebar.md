@@ -14,11 +14,12 @@
       * [Applying Shaders to Vertices](./docs/examples/shaders_to_vertices.md)
    * [Texture Coordinates](./docs/examples/texture_coordinates.md)   
    * [Image Effects (Webcam)](./docs/examples/image_effects.md)
-   * Working with Other Resources
-      * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
-      * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
    * Experimental (Not Working 100%)
       * [Bodypix Feedback](./docs/examples/bodypix.md)
+* Working with Other Resources
+   * [Porting Shadertoy Examples](./docs/examples/shadertoy.md)
+   * [Book of Shaders with p5.js](./docs/examples/bookofshaders.md)
+
 
 * Learn more
    * [Check out these references](./docs/continue-learning.md)
