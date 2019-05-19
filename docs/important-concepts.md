@@ -112,7 +112,7 @@ or
 ```glsl
 #define PI 3.14159265358979323846
 ```
-Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. This is theoretically faster and more efficient because it is not a variable stored in memory.
+Using #define is different than our const float variable in that it is not a variable but rather a script that is run before our shader compiles to replace all mentions of PI with the specified number. In coding this # syntax is known as a "preprocessor directive". This is theoretically faster and more efficient because it is not a variable stored in memory. 
 
 ### Variable qualifiers: Using Attributes
 Attributes are per-vertex parameters, as a result of this they are only used in our vertex file (.vert). They are typically used to recieve vertex data from p5 shapes, which is then converted to a usable format and passed to our fragment shader.
