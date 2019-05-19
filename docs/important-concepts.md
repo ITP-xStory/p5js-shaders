@@ -120,7 +120,6 @@ TexCoord and FragCoord—you may have noticed these variables in your shader cod
 
 TexCoord is calculated in the vertex and passed from the vertex to the fragment shader, and then the texture coordinates of our shader are set to be equal to TexCoord.
 
-.vert
 ```vert
 // our texcoordinates from the cpu
 attribute vec2 aTexCoord;
@@ -138,7 +137,6 @@ void main() {
 }
 ```
 
-.frag
 ```frag
    // recieve vTexCoord from vertex shader
    varying vec2 vTexCoord;
@@ -149,8 +147,7 @@ void main() {
 ```
 
 FragCoord is used within the fragment shader to calculate the texture coordinates relative to the resolution uniform we passed it.<br>
-.frag
-```glsl
+```frag
 void main (void) {
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
  }
