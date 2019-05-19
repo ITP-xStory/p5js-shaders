@@ -12,7 +12,7 @@
 
 ***
 
-#### js file
+#### .js file
 ```javascript
 let theShader;
 let shaderTexture;
@@ -75,7 +75,7 @@ function draw() {
   ellipse(260,0,200,200);
 }
 ```
-#### frag file
+#### .frag file
 ```frag
 precision mediump float;
 #endif
@@ -155,7 +155,7 @@ void main (void) {
     gl_FragColor = vec4(vec3(concentricCircles(st, vec2(0.0,0.0), 5.0, 5.0),concentricCircles(st, vec2(0.0,0.0), 10.0, 10.0),concentricCircles(st, vec2(0.0,0.0), 20.0, 10.0)),1.0);
 }
 ```
-#### vert file
+#### .vert file
 ```vert
 // vert file and comments from adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples
