@@ -2,7 +2,7 @@
 
 There are some amazing resources on the web for learning more about shaders. 
 
-**List of resources:**
+**Ressources for learning more:**
 
 * [The Book of Shaders](https://thebookofshaders.com)
   * The book of shaders is an incredible online book with interactive examples, made by [Patricio Gonzalez Vivo](http://patriciogonzalezvivo.com/) and [Jen Lowe](http://jenlowe.net/). It is by far the best place to start learning more about shaders, including the math and functions you can use when writing shaders.
@@ -15,3 +15,9 @@ There are some amazing resources on the web for learning more about shaders.
 
 * [OpenGL reference](https://www.khronos.org/opengl/wiki/Main_Page)
   * The full wiki on openGL
+
+
+**Ressources for learning more:**
+
+* [Shadertoy.com](https://www.shadertoy.com/)
+  * A great place to find shaders written by a huge online community.
