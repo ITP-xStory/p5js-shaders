@@ -19,4 +19,4 @@
       * [Bodypix Feedback](./docs/examples/bodypix.md)
 
 * Learn more
-   * [Check out these references](./docs/examples/continue-learning.md)
+   * [Check out these references](./docs/continue-learning.md)
