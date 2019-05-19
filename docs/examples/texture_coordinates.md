@@ -1,5 +1,5 @@
 # Texture Coordinates
-### This is a more advanced texture coordinate example.
+### This is an example showig how texture coordinates can be manipulated to duplicate variations of one image.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -10,7 +10,7 @@
   </iframe>
 </div>
 
-### js file
+#### js file
 ```javascript
 // a shader variable
 let theShader;
@@ -40,7 +40,7 @@ function draw() {
   rect(0,0,width,height);
 }
 ```
-### frag file
+#### frag file
 ```frag
 // rotate/tile functions from example by patricio gonzalez vivo
 // @patriciogv ( patriciogonzalezvivo.com )
@@ -129,7 +129,7 @@ void main (void) {
     gl_FragColor = vec4(vec3(concentricCircles(st, vec2(0.0,0.0), 5.0, 10.0)),1.0);
 }
 ```
-### vert file
+#### vert file
 ```vert
 // vert file and comments from adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples
