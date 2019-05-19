@@ -7,7 +7,7 @@
     * [Important shader concepts](./docs/important-concepts.md) 
 
 * Basic Examples
-   * [Basic gradient colors](./docs/examples/basic.md)
+   * [Basic gradient shader](./docs/examples/basic.md)
    * [Uniforms (Interactivity)](./docs/examples/interactivity.md)
    * [Applying Shaders as Texture](./docs/examples/shaders_to_shapes.md)
    * [Applying Shaders to Vertices](./docs/examples/shaders_to_vertices.md)
