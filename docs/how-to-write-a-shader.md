@@ -149,9 +149,6 @@ ___________________________________________
 # Shader code: One color fill
 
 
-
-//[https://glitch.com/~one-color](https://glitch.com/~one-color) 
-
 <iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=uniform.frag&previewSize=100" alt="gradient-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
 
 
@@ -175,8 +172,7 @@ void main() {
 
   vec4 positionVec4 = vec4(aPosition, 1.0);
 
-  // scale the rect by two, and move it to the center of the screen - if we don't do this, it will appear with its bottom left corner in the center of the sketch
-
+  // scale the rect by two, and move it to the center of the screen
   positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
 
   gl_Position = positionVec4;
