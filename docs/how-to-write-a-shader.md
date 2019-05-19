@@ -152,7 +152,19 @@ ___________________________________________
 # Shader code: One color fill
 
 
-<iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=uniform.frag&previewSize=100" alt="gradient-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
+<!-- Copy and Paste Me -->
+
+  <iframe
+    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+    src="https://glitch.com/embed/#!/embed/normal-coord-vs-normalized?path=README.md&previewSize=0"
+    alt="normal-coord-vs-normalized on Glitch"
+    style="height: 100%; width: 100%; border: 0;">
+  </iframe>
+
+
+<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+  <iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=uniform.frag&previewSize=100" alt="gradient-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
+</div>
 
 
 ### shader.vert
