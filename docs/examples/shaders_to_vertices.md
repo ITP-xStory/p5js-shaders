@@ -1,5 +1,6 @@
 # Applying Shaders to Vertices
-#### This is an example showing how to apply your shaders to a vertex shape in p5. It is necessary to pass uv values to the vertex so it knows how the texture should be mapped, in this case the shape changes, so the uv values are mapped to change with the shape.
+#### This is an example showing how to apply your shaders to a vertex shape in p5.
+It is necessary to pass uv values to the vertex so it knows how the texture should be mapped, in this case the shape changes, so the uv values are mapped to change with the shape.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
