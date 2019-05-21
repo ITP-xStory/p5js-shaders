@@ -1,3 +1,5 @@
+### [Guide Page](https://itp-xstory.github.io/p5js-shaders/#/)
+
 # Examples
 
 ### Moire / Texture Coordinate Examples
