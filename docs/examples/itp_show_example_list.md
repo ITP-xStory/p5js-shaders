@@ -9,8 +9,7 @@
 
 ### Webcam Examples
 * [https://shader-with-webcam.glitch.me/](https://shader-with-webcam.glitch.me/)
-* [https://webcam-feedback.glitch.me/](https://webcam-feedback.glitch.me/)
-* [https://webcam-feedback-2.glitch.me/](https://webcam-feedback-2.glitch.me/)
+* [https://webcam-feedback-loop.glitch.me/](https://webcam-feedback-loop.glitch.me/)
 * [https://webcam-blur-fract.glitch.me/](https://webcam-blur-fract.glitch.me/)
 * [https://psychedelic-webcam-shader.glitch.me/](https://psychedelic-webcam-shader.glitch.me/)
 
