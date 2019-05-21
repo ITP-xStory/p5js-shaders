@@ -9,3 +9,6 @@
 * [https://shader-with-webcam.glitch.me/](https://shader-with-webcam.glitch.me/)
 * [https://webcam-feedback.glitch.me/](https://webcam-feedback.glitch.me/)
 * [https://webcam-feedback-2.glitch.me/](https://webcam-feedback-2.glitch.me/)
+
+### Other
+* [https://recursive-noise-experiment.glitch.me/](https://recursive-noise-experiment.glitch.me/)
