@@ -24,7 +24,7 @@ The .vert file is run first, and automatically passes the calculations we do wit
 
 *The important thing you need to remember now is that the content of these two files will apply to all pixels! These two programs are run simultaneously for every single pixel on your canvas. As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
 
-If you are interested in diving deeper in what happens when these files are run, this [wikibook page on OpenGL](https://en.wikibooks.org/wiki/GLSL_Programming/OpenGL_ES_2.0_Pipeline) is a great ressource.
+If you are interested in diving deeper in what happens when these files are run, this [wikibook page on OpenGL](https://en.wikibooks.org/wiki/GLSL_Programming/OpenGL_ES_2.0_Pipeline) is a great resource.
 
 
 
