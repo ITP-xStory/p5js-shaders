@@ -42,7 +42,7 @@ At first it will be confusing to have to type **vec2 position** or **float scale
 
 ### The wonders of vectors
 
-By now you will have noticed that we are using vectors (vec3, vec4 etc.) a lot in shaders. Vectors are used when we need a variable to hold two or more numbers.  If we only need the variable to hold one number we use float or int, otherwise we say vec2, vec3, vec4, vec5 etc. The number is the amount of parameters you intend to use. 
+By now you will have noticed that we are using vectors (vec3, vec4 etc.) a lot in shaders. Vectors are used when we need a variable to hold two or more numbers.  If we only need the variable to hold one number we use float or int, otherwise we say vec2, vec3, vec4, etc. The number is the amount of parameters you intend to use. 
 
 In math vectors are used to positions or directions, but in shader land vectors are also used to store colors.
 
