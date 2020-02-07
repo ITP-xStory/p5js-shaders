@@ -64,15 +64,14 @@ attribute vec3 aPosition;
 All shaders must have a void main() function. This is where the program starts. Remember that everything in here is run for each pixel on the canvas! So you need to adjust your thinking, and think about coding for just one pixel!
 
 For shaders in p5, there is something weird that needs to happen in the main() function.
-We need to scale the attribute aPosition before it can be passed to the .frag file. This might be a bug that is resolved in a later version. But for now we can get around it by simply scaling all pixels positions.
+We need to scale the attribute aPosition before it can be passed to the .frag file. This might be a bug that is resolved in a later version. But for now we can get around it by simply scaling all pixels positions and movign them to the correct position. Imagine you have a frame (the canvas on your graphics card) and you are putting an image (the pixels) inside the frame. For some reason the frame has decided that the image should be placed in middle of it, and should fit from the middle to the upper right corner, so it does not fill up the frame. We need to use a bit of math to fix this.
 
+First we copy the position data into a vec4 (vector 4), meaning we will now have the following numbers in there (x,y,z,w). We are not using z, because we are only operating in two dimensions, x and y. We will put in 1.0 as the w parameter (when w = 1.0 the vector is treated as a position, when w = 0.0 the vector is treated as a direction, this is standard vector math. [There is a great guide on very basic vector math here.](https://www.mathsisfun.com/algebra/vectors.html). 
 
-First we copy the position data into a vec4 (vector 4), meaning we will now have the following numbers in there (x,y,z,w). We will put in 1.0 as the w parameter (when w = 1.0 the vector is treated as a position, when w = 0.0 the vector is treated as a direction, this is standard vector math). 
-
-Then we scale the pixel position by two, and move it to the center of the screen. If we don't do this, it will appear with its bottom left corner in the center of the sketch. These numbers might not make any sense right now, but they will after you read the [Important shader concepts](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts).
+Then we scale the pixel position by two, to get it twice as big - meaning the upper right corner is now larger than our frame (canvas), and move it left and down screen, by doing -1. These weird and small (0-1) numbers might not make any sense right now, but they will make a little more sense after you read the [Important shader concepts](https://itp-xstory.github.io/p5js-shaders/#/./docs/important-concepts).
 
 ```glsl
-positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
+positionVec4.xy = positionVec4.xy * 2.0 - 1.0; // doing .xy means we do the same math for both x and y positions
 
 ```
 
