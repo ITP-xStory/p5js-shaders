@@ -4,7 +4,7 @@ Now let's talk about the shader files we're loading.
 
 To make a shader, you must make two files in your p5 sketch folder: A **"shader.vert"** file and a **"shader.frag"** file. You can name the shader files whatever you want. "myAwesomeShader.vert" and "myAwesomeShader.frag" are completely valid names. As long as you have both the .vert and the .frag file, you are good to go.
 
-We will start by making own version of a one color fill, just like [**fill()**](https://p5js.org/reference/#/p5/fill) in p5. So why not name the files "onecolor.vert" and "onecolor.frag"? You can click around the files right here, and then we'll go through what they contain below. You can click the "App" tab that appears when you hover your mouse over the code to see the shader in action.
+We will start by making own version of a one color fill, just like [**fill()**](https://p5js.org/reference/#/p5/fill) in p5. So why not name the files "onecolor.vert" and "onecolor.frag"? You can click around the files right here, and then we'll go through what they contain below. You can click the "View App" tab to see the shader in action. Click "View Source" to see the code again.
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
 <iframe allow="geolocation; microphone; camera; midi; vr; encrypted-media" src="https://glitch.com/embed/#!/embed/one-color?path=onecolor.frag&previewSize=0&sidebarCollapsed=false" alt="one-color on Glitch" style="height: 100%; width: 100%; border: 0;"> </iframe>
