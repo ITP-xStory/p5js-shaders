@@ -4,4 +4,4 @@
 * [bit.ly/PCDShaderSlides](https://bit.ly/PCDShaderSlides)
 
 ### Examples
-* [bit.ly/P5ShadersExamples]((https://bit.ly/P5ShadersExamples)
+* [bit.ly/P5ShadersExamples](https://bit.ly/P5ShadersExamples)
