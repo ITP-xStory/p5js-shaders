@@ -28,7 +28,7 @@ You won't need to think too much about the .vert file in this guide, since we ar
 
 If we had placed calculations in the .vert file, the final outcome of how to color a pixel, is done as an interpolation between the vertexes of your geometry (the code literally asks - what color should the pixel be if it is between these two parts of my mesh?. The result is not as fine grained as doing the calculations in the .frag shader. 
 
-![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/pervertexshading.png?raw=true)
+
 ![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/perpixelshading.png?raw=true)
 [Image source: by Maarten Everts in The Unity CG shader programming guide](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Smooth_Specular_Highlights)
 
