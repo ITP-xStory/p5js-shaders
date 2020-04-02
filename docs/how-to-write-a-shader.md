@@ -29,13 +29,15 @@ You won't need to think too much about the .vert file in this guide, since we ar
 But just to explain the difference: If we had instead placed our calculations in the .vert file, the final outcome of how to color a pixel, is done as an interpolation between the vertexes of your geometry (the code literally asks - what color should the pixel be if it is between these two parts of my mesh?). The result is not as fine grained as doing the calculations in the .frag shader, because this would done per pixel.
 Doing the calculation in the .frag file can cost more in terms of the performance, depending on how crazy cool-looking your shader gets. And as with all other programming, the more lines of code you add (or the more calculations per pixel) the slower the program gets! But that is precisely why shaders run on the GPU, so we can do these crazy calculations simultaneously.
 
-Here is an example of what a shader that calculates shiny lighting (called specular highlights) would look like if it was done in the .vert  versus in the .frag file.
+Here is an example of what a shader that calculates shiny lighting (called specular highlights) would look like if it was done in the .vert file versus in the .frag file.
 
 ![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/pervertexshading.png?raw=true)
-Specular highlight in the .vert file.
+
+*Specular highlight in the .vert file.*
 
 ![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/perpixelshading.png?raw=true)
-Specular highlight in the .frag file.
+
+*Specular highlight in the .frag file.*
 
 [Image source: by Maarten Everts in The Unity CG shader programming guide](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Smooth_Specular_Highlights)
 
