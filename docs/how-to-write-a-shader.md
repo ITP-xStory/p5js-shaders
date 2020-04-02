@@ -22,14 +22,21 @@ The [**.frag file**](https://itp-xstory.github.io/p5js-shaders/#/./docs/how-to-w
 ### The shader program runs like this
 The .vert file is run first, and automatically passes the calculations we do with the geometry (shapes) on our canvas on to the .frag file. The fragment file then colors the pixels according to their positions!
 
-*The important thing you need to remember now is that the content of these two files will end up applying to all pixels you are putting your shader on! As we [explained before](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
+*The important thing you need to remember now is that final outcome of these two files will end up being applied to all pixels simultaneously! As we [explained before with the mythbusters video](https://itp-xstory.github.io/p5js-shaders/#/./docs/what-are-shaders).*
 
-You won't need to think too much about the .vert file in this guide, since we are only covering fragment shaders. This just means that all of the calculations we are doing, we will be placing in the .frag file. The only thing we are going to do in the .vert file is pass on the position of every pixel on the geometry, as we will go through in a moment.
+You won't need to think too much about the .vert file in this guide, since we are only covering fragment shaders. This just means that all of the calculations we will be doing, we will be placing in the .frag file. The only thing we are going to do in the .vert file, is to pass on the position of every pixel on the geometry on to the .frag file. We will go through this in a moment.
 
-If we had placed calculations in the .vert file, the final outcome of how to color a pixel, is done as an interpolation between the vertexes of your geometry (the code literally asks - what color should the pixel be if it is between these two parts of my mesh?. The result is not as fine grained as doing the calculations in the .frag shader. 
+But just to explain the difference: If we had instead placed our calculations in the .vert file, the final outcome of how to color a pixel, is done as an interpolation between the vertexes of your geometry (the code literally asks - what color should the pixel be if it is between these two parts of my mesh?). The result is not as fine grained as doing the calculations in the .frag shader, because this would done per pixel.
+Doing the calculation in the .frag file can cost more in terms of the performance, depending on how crazy cool-looking your shader gets. And as with all other programming, the more lines of code you add (or the more calculations per pixel) the slower the program gets! But that is precisely why shaders run on the GPU, so we can do these crazy calculations simultaneously.
+
+Here is an example of what a shader that calculates shiny lighting (called specular highlights) would look like if it was done in the .vert  versus in the .frag file.
 
 ![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/pervertexshading.png?raw=true)
+Specular highlight in the .vert file.
+
 ![](https://github.com/ITP-xStory/p5js-shaders/blob/gh-pages/assets/perpixelshading.png?raw=true)
+Specular highlight in the .frag file.
+
 [Image source: by Maarten Everts in The Unity CG shader programming guide](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Smooth_Specular_Highlights)
 
 If you are interested in diving deeper in what happens when these files are run, this [wikibook page on OpenGL](https://en.wikibooks.org/wiki/GLSL_Programming/OpenGL_ES_2.0_Pipeline) is a great resource.
