@@ -105,13 +105,25 @@ function windowResized(){
 
 ___________________________________________
 
+# Setting up shaders in the p5.js Editor
+
+
+Initially when we wrote this guide, shader files were not supported in the p5 editor, but after a big overhaul from Cassie Tarakajian @catarak it now does!
+
+Here is our basic example set up in the editor.
+
+<iframe src="https://preview.p5js.org/louiselessel/embed/xCPxmXGVE"></iframe>
+
+You simply click 'Create File' on the 'Sketch Files' to the left (if it's hidden click that arrow above your code!) and create a file for both the .vert and .frag code.
+
+
+___________________________________________
+
 # Setting up p5.js in Glitch
 
 
-Unfortunately at the moment shader files are not supported in the p5 editor,
-so the easiest way to get started using shaders in p5 is to use Glitch.com.
-
-Which is great because Glitch is an awesome service that can host your code with custom URLs and you'll be able to view and remix all of our examples.
+All of the examples in this guide are set up using Glitch.com. An awesome platform to host your code online with custom URLs, make collections, collaborate in teams and more. 
+We use it because it is an easy way to get you going and you'll be able to view and remix all of our examples.
 
 To get started, visit our [glitch template page](https://glitch.com/edit/#!/shader-template) and click "Remix to Edit" in the top right corner.
 
