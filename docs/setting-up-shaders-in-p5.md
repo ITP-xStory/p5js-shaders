@@ -110,9 +110,12 @@ ___________________________________________
 
 Initially when we wrote this guide, shader files were not supported in the p5 editor, but after a big overhaul from Cassie Tarakajian @catarak it now does!
 
-Here is our basic example set up in the editor.
+Here is our basic example set up in the editor using the iframe:
 
 <iframe src="https://preview.p5js.org/louiselessel/embed/xCPxmXGVE"></iframe>
+
+And here is the example on the editor 
+https://editor.p5js.org/louiselessel/sketches/xCPxmXGVE
 
 You simply click 'Create File' on the 'Sketch Files' to the left (if it's hidden click that arrow above your code!) and create a file for both the .vert and .frag code.
 
