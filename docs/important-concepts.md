@@ -28,6 +28,19 @@ In this example, as you move your mouse you can see the pixel location (white bo
   </iframe>
 </div>
 
+
+In the example we include this IMPORTANT line in our sketch.js file to make sure that the scaling is correct from 0 to 1. 
+Some displays (retina for instance) scale pixels differently. So if you do not include this line (try removing it to test your display) you might not have a 0 to 1 space to work with. 
+
+You would notice this easily if you output gl_FragColor = vec4(st.x,st.y,0.0,1.0); We should see black in lower left corner, and yellow in the upper right corner. Everything else should be a gradient with red in bottom right, and green in top left. 
+
+Without the line you might have yellow already in the middle of the sketch area! This means we reached a color of r,g,b,a = 1.0, 1.0, 0.0, 1.0 way too soon!
+
+```javascript
+  // disables scaling for retina screens which can create inconsistent scaling between displays
+  pixelDensity(1);
+```
+
 ## Floating point values are important
 Since everything is defined between 0 and 1. Always write out the whole floating point value, including the punctuation! Do not write (0,0,1) for blue, write (0.0, 0.0, 1.0). Graphics cards can be more or less picky about this, but if you have a picky graphics card, the shader will not run!
 
