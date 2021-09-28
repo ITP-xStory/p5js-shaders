@@ -29,6 +29,9 @@ function preload(){
 }
 
 function setup() {
+  // disables scaling for retina screens which can create inconsistent scaling between displays
+  pixelDensity(1);
+  
   // shaders require WEBGL mode to work
   createCanvas(windowWidth, windowHeight, WEBGL);
   noStroke();
