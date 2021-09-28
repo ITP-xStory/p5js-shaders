@@ -27,7 +27,7 @@ In this example, as you move your mouse you can see the pixel location (white bo
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
-
+<br></br>
 
 In the example we include this IMPORTANT line in our sketch.js file to make sure that the scaling is correct from 0 to 1. 
 Some displays (retina for instance) scale pixels differently. So if you do not include this line (try removing it to test your display) you might not have a 0 to 1 space to work with. 
@@ -37,8 +37,11 @@ You would notice this easily if you output gl_FragColor = vec4(st.x,st.y,0.0,1.0
 Without the line you might have yellow already in the middle of the sketch area! This means we reached a color of r,g,b,a = 1.0, 1.0, 0.0, 1.0 way too soon!
 
 ```javascript
+function setup() {
   // disables scaling for retina screens which can create inconsistent scaling between displays
   pixelDensity(1);
+  
+}
 ```
 
 ## Floating point values are important
