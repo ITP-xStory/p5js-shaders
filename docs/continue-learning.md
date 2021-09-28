@@ -24,3 +24,7 @@ There are some amazing resources on the web for learning more about shaders.
 
 * [Shadertoy.com](https://www.shadertoy.com/)
   * A great place to find shaders written by a huge online community.
+
+
+* [OpenProcessing](https://openprocessing.org/browse/#)
+  * A great place to look around for people using shaders in their p5.js projects. Unfortunately people don't tag with "shader" keyword that often, but have a look anyway! 
